@@ -49,19 +49,20 @@ h2{font-size:2.2rem;font-weight:900;line-height:1.25;margin-bottom:16px}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 
 /* HERO */
-#hero{display:flex;align-items:center;padding:120px 48px 80px;background:var(--bg);overflow:hidden}
-.h-o1{width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.18),transparent 70%);top:-100px;right:-100px}
-.h-o2{width:400px;height:400px;background:radial-gradient(circle,rgba(155,89,255,.12),transparent 70%);bottom:-50px;left:-80px}
-.hi{display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:center;position:relative;z-index:1}
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:0;background:#fff}
+.hero-img{position:absolute;top:0;right:0;width:52%;height:100%;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-img::before{content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(to right,#fff,transparent);z-index:1}
+.hero-img::after{content:'';position:absolute;top:0;left:0;right:0;height:100%;background:linear-gradient(to right,#fff 0%,rgba(255,255,255,.7) 30%,transparent 60%);z-index:1}
+.hi{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:140px 48px 100px;width:100%}
+.htext{max-width:600px}
 .hbadge{display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--r);margin-bottom:28px;border-bottom:2px solid var(--r);padding-bottom:4px;line-height:1.6}
-h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;letter-spacing:-.02em}
-.hdesc{color:var(--m);font-size:1rem;line-height:1.9;margin-bottom:40px;max-width:520px}
+h1.hh{font-size:3.4rem;font-weight:900;line-height:1.18;margin-bottom:24px;letter-spacing:-.02em}
+.hdesc{color:var(--m);font-size:1rem;line-height:1.9;margin-bottom:40px;max-width:480px}
 .hctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
 .htrust{display:flex;gap:22px;flex-wrap:wrap}
 .ti{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
 .ti svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5;flex-shrink:0}
-.himg{border-radius:20px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,0.14);line-height:0}
-.himg img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* LOGOS */
 #logos{background:var(--surface);padding:52px 48px}
@@ -199,7 +200,7 @@ footer p{font-size:.76rem;color:var(--m2)}
 @media(max-width:960px){
   nav{padding:0 24px}.nav-r .nl{display:none}
   section{padding:80px 24px}#logos{padding:40px 24px}#skills{padding:60px 24px}#form{padding:80px 24px}
-  .hi{grid-template-columns:1fr}.himg{display:none}
+  .hero-img{width:100%;position:relative;height:50vw;min-height:300px}.hero-img::after{background:linear-gradient(to bottom,#fff 0%,transparent 40%)}.hi{padding:40px 24px 60px}
   h1.hh{font-size:2.3rem}
   .cg,.pl,.wg,.tg{grid-template-columns:1fr}
   .sk-grid{grid-template-columns:repeat(3,1fr)}
@@ -238,25 +239,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- 2. FIRST VIEW -->
 <section id="hero">
-  <div class="orb h-o1"></div><div class="orb h-o2"></div>
-  <div class="wrap">
-    <div class="hi">
-      <div>
-        <div class="hbadge fi">20代・広告運用未経験者向け　マーケティング職専門転職エージェント</div>
-        <h1 class="hh fi d1">広告運用は未経験でも、<br><span class="gt">これまでの経験は</span><br>未経験ではない。</h1>
-        <p class="hdesc fi d2">営業力、提案力、顧客理解、数値管理。<br>これまでの仕事で身につけた経験を活かして、広告運用職へのキャリアチェンジを目指しませんか？<br>広告代理店が運営するマーケティング職専門エージェントが、求人選びから書類添削、面接対策までサポートします。</p>
-        <div class="hctas fi d3">
-          <a href="#form" class="btn btn-p btn-lg">広告運用職への転職を無料相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="#cases" class="btn btn-g btn-lg">求人例を見る</a>
-        </div>
-        <div class="htrust fi d4">
-          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>求職者の利用料金0円</span>
-          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>オンライン面談</span>
-          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>転職時期未定でも相談可能</span>
-        </div>
+  <div class="hero-img"><img src="hero.jpg" alt="キャリア面談のようす" loading="eager"></div>
+  <div class="hi">
+    <div class="htext">
+      <div class="hbadge fi">20代・広告運用未経験者向け　マーケティング職専門転職エージェント</div>
+      <h1 class="hh fi d1">広告運用は未経験でも、<br><span class="gt">これまでの経験は</span><br>未経験ではない。</h1>
+      <p class="hdesc fi d2">営業力、提案力、顧客理解、数値管理。<br>これまでの仕事で身につけた経験を活かして、広告運用職へのキャリアチェンジを目指しませんか？<br>広告代理店が運営するマーケティング職専門エージェントが、求人選びから書類添削、面接対策までサポートします。</p>
+      <div class="hctas fi d3">
+        <a href="#form" class="btn btn-p btn-lg">広告運用職への転職を無料相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#cases" class="btn btn-g btn-lg">求人例を見る</a>
       </div>
-      <div class="himg fi d2">
-        <img src="hero.jpg" alt="キャリア面談のようす" loading="eager">
+      <div class="htrust fi d4">
+        <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>求職者の利用料金0円</span>
+        <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>オンライン面談</span>
+        <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>転職時期未定でも相談可能</span>
       </div>
     </div>
   </div>
