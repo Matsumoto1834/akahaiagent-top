@@ -33,20 +33,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 .gp{background:linear-gradient(135deg,var(--r) 0%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--t)}
-.logo-img{display:none}
-.logo-txt{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.08em;color:var(--t)}.logo-txt span{color:var(--r)}
-.nav-r{display:flex;align-items:center;gap:32px}
-.nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
-.btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s}.btn-n:hover{opacity:.85}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:8px}
-.ham span{display:block;width:22px;height:2px;background:var(--t);transition:all .3s;border-radius:2px}
-/* FIXED CTA */
-.fixed-cta{position:fixed;top:14px;right:20px;z-index:600;font-size:.82rem;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 2px 16px rgba(233,69,96,.4);transition:opacity .2s,box-shadow .2s;white-space:nowrap}.fixed-cta:hover{opacity:.88;box-shadow:0 4px 24px rgba(233,69,96,.55)}
-.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--b);padding:24px 24px 32px;z-index:499;flex-direction:column;gap:16px}
-.mob-nav.open{display:flex}
-.mob-nav .nl{font-size:.95rem;padding:4px 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo-txt{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:.08em;color:var(--t)}.logo-txt span{color:var(--r)}
+.nav-cta{font-size:.85rem;font-weight:700;padding:10px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 2px 16px rgba(233,69,96,.35);transition:opacity .2s,box-shadow .2s;white-space:nowrap}.nav-cta:hover{opacity:.88;box-shadow:0 4px 24px rgba(233,69,96,.55)}
 
 /* LAYOUT */
 section{padding:100px 48px;position:relative}
@@ -222,31 +212,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
-<a href="https://timerex.net/s/akahai_68a1/0826335e" class="fixed-cta" target="_blank" rel="noopener" aria-label="無料面談を申し込む（外部サイト）">無料で面談を申し込む</a>
 
 <!-- NAV -->
 <nav role="navigation" aria-label="メインナビゲーション">
   <a href="/" class="logo" aria-label="アカハイエージェント トップへ">
-    <img src="akahaiagent_logo.png" alt="アカハイエージェント" class="logo-img">
     <span class="logo-txt">AKAHAI<span>AGENT</span></span>
   </a>
-  <div class="nav-r">
-    <a href="#services" class="nl">サービス一覧</a>
-    <a href="#quiz" class="nl">サービス診断</a>
-    <a href="#flow" class="nl">ご利用の流れ</a>
-    <a href="#faq" class="nl">よくある質問</a>
-  </div>
-  <button class="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="mob-nav" id="ham-btn">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="https://timerex.net/s/akahai_68a1/0826335e" class="nav-cta" target="_blank" rel="noopener" aria-label="無料面談を申し込む（外部サイト）">無料で面談を申し込む</a>
 </nav>
 
-<!-- MOBILE NAV -->
-<div class="mob-nav" id="mob-nav" role="navigation" aria-label="モバイルナビゲーション">
+<!-- MOBILE NAV (removed) -->
+<div style="display:none">
   <a href="#services" class="nl">サービス一覧</a>
   <a href="#quiz" class="nl">サービス診断</a>
-  <a href="#flow" class="nl">ご利用の流れ</a>
-  <a href="#faq" class="nl">よくある質問</a>
 </div>
 
 <!-- HERO -->
@@ -644,23 +622,6 @@ function goStep2Freelance() {
   }
 }
 
-// Mobile nav toggle
-var hamBtn = document.getElementById('ham-btn');
-var mobNav = document.getElementById('mob-nav');
-hamBtn.addEventListener('click', function() {
-  var isOpen = mobNav.classList.toggle('open');
-  hamBtn.setAttribute('aria-expanded', String(isOpen));
-  hamBtn.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
-});
-
-// Close mobile nav on link click
-mobNav.querySelectorAll('a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    mobNav.classList.remove('open');
-    hamBtn.setAttribute('aria-expanded', 'false');
-    hamBtn.setAttribute('aria-label', 'メニューを開く');
-  });
-});
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(btn) {
