@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アカハイエージェント | AIO実務経験者専門 フリーランスマッチング</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TPGHB3RL');</script>
+<!-- End Google Tag Manager -->
+<link rel="icon" href="akahaiagent_favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FFFFFF;--surface:#F5F5F8;
+  --card:rgba(0,0,0,0.03);--card-h:rgba(0,0,0,0.06);
+  --b:rgba(0,0,0,0.08);--bb:rgba(0,0,0,0.15);
+  --r:#E94560;--o:#FF6B35;--p:#7C3AED;
+  --t:#111118;--m:#666680;--m2:#999AB0;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.gt{background:linear-gradient(135deg,var(--r) 0%,var(--o) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gp{background:linear-gradient(135deg,var(--r) 0%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.logo{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.08em}.logo span{color:var(--r)}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
+.btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s,box-shadow .2s}.btn-n:hover{opacity:.85;box-shadow:0 0 32px rgba(233,69,96,.5)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.97rem;padding:15px 32px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:all .25s}
+.btn-p{background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 4px 24px rgba(233,69,96,.35)}.btn-p:hover{box-shadow:0 6px 36px rgba(233,69,96,.55);transform:translateY(-2px)}
+.btn-g{background:rgba(255,255,255,.05);color:var(--t);border:1px solid var(--bb);backdrop-filter:blur(8px)}.btn-g:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.25)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;flex-shrink:0}
+.btn-lg{padding:17px 42px;font-size:1.02rem;border-radius:10px}
+section{padding:110px 48px;position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.lbl{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--r);margin-bottom:16px}.lbl::before{content:'';width:16px;height:1px;background:var(--r)}
+h2{font-size:2.2rem;font-weight:900;line-height:1.25;margin-bottom:16px}
+.sub{color:var(--m);font-size:.95rem;line-height:1.9;max-width:580px}
+.tc{text-align:center}.tc .sub{margin:0 auto}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+
+/* HERO */
+#hero{display:flex;align-items:center;padding:120px 48px 80px;background:var(--bg);overflow:hidden}
+.h-o1{width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.18),transparent 70%);top:-100px;right:-100px}
+.h-o2{width:400px;height:400px;background:radial-gradient(circle,rgba(155,89,255,.12),transparent 70%);bottom:-50px;left:-80px}
+.hi{display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:center;position:relative;z-index:1}
+.hbadge{display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--r);margin-bottom:28px;border-bottom:2px solid var(--r);padding-bottom:4px}
+.hdot{display:none}
+@keyframes gp{0%,100%{box-shadow:0 0 0 0 rgba(233,69,96,.6)}50%{box-shadow:0 0 0 5px rgba(233,69,96,0)}}
+h1.hh{font-family:'Inter',sans-serif;font-size:3.5rem;font-weight:900;line-height:1.12;margin-bottom:24px;letter-spacing:-.02em}
+.hdesc{color:var(--m);font-size:1rem;line-height:1.9;margin-bottom:40px;max-width:520px}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.htrust{display:flex;gap:22px;flex-wrap:wrap}
+.ti{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
+.ti svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5;flex-shrink:0}
+.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.6),rgba(255,107,53,.6),transparent)}
+.hch{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.hct{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--m)}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.sc{background:var(--surface);border:1px solid var(--b);border-radius:12px;padding:18px 16px}
+.sn{font-family:'Inter',sans-serif;font-size:2.6rem;font-weight:900;line-height:1;margin-bottom:4px}
+.sl{font-size:.72rem;color:var(--m)}
+.nr{color:var(--r)}.no{color:var(--o)}.np{color:var(--p)}.nb{color:#5BA8FF}
+.snote{font-size:.68rem;color:var(--m2);margin-top:12px;text-align:center}
+
+/* CASES */
+#cases{background:var(--bg)}
+.c-o{width:500px;height:500px;background:radial-gradient(circle,rgba(233,69,96,.07),transparent 70%);top:50%;right:-150px;transform:translateY(-50%)}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.cc{background:#fff;border:1px solid var(--b);border-radius:16px;padding:28px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.05)}
+.cc::after{content:'';position:absolute;inset:0;border-radius:16px;opacity:0;background:linear-gradient(135deg,rgba(233,69,96,.06),rgba(255,107,53,.03));transition:opacity .3s}
+.cc:hover{border-color:rgba(233,69,96,.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}.cc:hover::after{opacity:1}
+.ct{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:8px;flex-wrap:wrap}
+.cb{font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.05em}
+.cb-a{background:rgba(233,69,96,.12);color:var(--r)}.cb-p{background:rgba(255,107,53,.12);color:var(--o)}.cb-c{background:rgba(91,168,255,.12);color:#5BA8FF}.cb-g{background:rgba(124,58,237,.12);color:var(--p)}
+.cr{font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;color:var(--r);white-space:nowrap}
+.ctitle{font-size:.92rem;font-weight:700;margin-bottom:10px;line-height:1.5}
+.cdesc{font-size:.82rem;color:var(--m);line-height:1.75;margin-bottom:16px}
+.ctags{display:flex;gap:6px;flex-wrap:wrap}
+.ctag2{font-size:.68rem;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid var(--b);color:var(--m);font-weight:500}
+.cf{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:44px}
+.cn{font-size:.78rem;color:var(--m2)}
+
+/* PAIN */
+#pain{background:var(--surface)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.pr{display:flex;flex-direction:column;gap:14px}
+.pc{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--b)}
+.pc:first-child{border-top:1px solid var(--b)}
+.pi{display:none}
+.pb h3{font-size:.92rem;font-weight:700;margin-bottom:6px;padding-left:14px;border-left:2px solid var(--r)}
+.pb p{font-size:.82rem;color:var(--m);line-height:1.75;padding-left:14px}
+
+/* WHY */
+#why{background:var(--bg)}
+.w-o{width:600px;height:600px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);top:0;left:-200px}
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.wc{background:#fff;border:1px solid var(--b);border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 2px 16px rgba(0,0,0,0.05)}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:opacity .3s}
+.wc:hover{border-color:rgba(155,89,255,.25);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.4)}.wc:hover::before{opacity:1}
+.wn{font-family:'Inter',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;margin-bottom:18px;color:rgba(0,0,0,.06)}
+.wc h3{font-size:1rem;font-weight:700;margin-bottom:12px;line-height:1.4}
+.wc p{font-size:.84rem;color:var(--m);line-height:1.85}
+
+/* NUMBERS */
+#numbers{background:var(--bg);padding:80px 48px}
+.nw{max-width:1180px;margin:0 auto;background:linear-gradient(135deg,rgba(233,69,96,.05),rgba(124,58,237,.05));border:1px solid var(--b);border-radius:24px;padding:60px 40px;position:relative;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.06)}
+.nw::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.5),rgba(155,89,255,.5),transparent)}
+.ng{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b)}
+.ni{background:transparent;padding:32px 20px;text-align:center}
+.nv{font-family:'Inter',sans-serif;font-size:3.2rem;font-weight:900;line-height:1;margin-bottom:10px;background:linear-gradient(135deg,var(--r),var(--o));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nl2{font-size:.78rem;color:var(--m)}
+.nw-note{text-align:center;font-size:.76rem;color:var(--m2);margin-top:24px}
+
+/* FLOW */
+#flow{background:var(--surface)}
+.f-o{width:400px;height:400px;background:radial-gradient(circle,rgba(233,69,96,.08),transparent 70%);bottom:-100px;right:-50px}
+.fs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;position:relative}
+.fc{position:absolute;top:28px;left:calc(10% + 28px);right:calc(10% + 28px);height:1px;background:linear-gradient(90deg,var(--r),var(--o),var(--p));opacity:.2}
+.fst{text-align:center;padding:0 16px;position:relative;z-index:1}
+.fd{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 24px rgba(233,69,96,.4);position:relative}
+.fd::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(233,69,96,.25)}
+.fst h3{font-size:.85rem;font-weight:700;margin-bottom:8px}
+.fst p{font-size:.78rem;color:var(--m);line-height:1.7}
+.fca{text-align:center;margin-top:52px;position:relative;z-index:1}
+
+/* FAQ */
+#faq{background:var(--bg)}
+.fi2{max-width:760px;margin:52px auto 0}
+.fqi{border-bottom:1px solid var(--b)}
+.fq{width:100%;background:none;border:none;color:var(--t);font-family:'Noto Sans JP',sans-serif;font-size:.95rem;font-weight:700;padding:22px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:16px}
+.fqic{width:30px;height:30px;border-radius:50%;flex-shrink:0;border:1px solid var(--bb);display:flex;align-items:center;justify-content:center;color:var(--r);font-size:1.3rem;line-height:1;transition:transform .35s,background .2s,border-color .2s}
+.fq.open .fqic{transform:rotate(45deg);background:rgba(233,69,96,.1);border-color:rgba(233,69,96,.3)}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.fain{padding:0 0 22px;font-size:.88rem;color:var(--m);line-height:1.9}
+
+/* LOGOS */
+#logos{background:var(--surface);padding:52px 48px}
+.logos-wrap{max-width:1180px;margin:0 auto}
+.logos-label{text-align:center;font-size:.72rem;color:var(--m2);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:32px}
+.logos-row{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.logo-item{display:flex;align-items:center;justify-content:center;height:48px;padding:0 8px}.logo-item img{height:100%;width:auto;max-width:120px;object-fit:contain;opacity:1}
+
+/* SKILLS */
+#skills{background:var(--surface);padding:80px 48px}
+.sk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:36px}
+.sk-tag{background:#fff;border:1px solid var(--b);border-radius:12px;padding:18px 12px;text-align:center;font-size:.84rem;font-weight:600;color:var(--t);line-height:1.4;transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;min-height:72px}
+.sk-tag:hover{border-color:rgba(233,69,96,.3);box-shadow:0 4px 16px rgba(233,69,96,.08)}
+.sk-note{margin-top:28px;text-align:center;font-size:.82rem;color:var(--m);line-height:2}
+
+/* TARGET */
+#target{background:var(--bg);padding-bottom:40px}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.tg-left .sub{margin-top:16px}
+.tg-list{display:flex;flex-direction:column;gap:12px}
+.tg-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--b)}
+.tg-item:first-child{border-top:1px solid var(--b)}
+.tg-check{display:none}
+.tg-text h4{font-size:.92rem;font-weight:700;margin-bottom:4px;padding-left:14px;border-left:2px solid var(--r)}
+.tg-text p{font-size:.8rem;color:var(--m);line-height:1.7;padding-left:14px}
+.tg-ng{margin-top:20px;padding:16px 20px;border-radius:12px;background:rgba(0,0,0,.02);border:1px solid var(--b)}
+.tg-ng-label{font-size:.72rem;font-weight:700;color:var(--m2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.tg-ng-list{display:flex;flex-direction:column;gap:6px}
+.tg-ng-item{font-size:.82rem;color:var(--m);display:flex;align-items:center;gap:8px}
+.tg-ng-item::before{content:'×';color:var(--m2);font-weight:700;font-size:.9rem}
+
+/* CTA */
+#cta{padding:130px 48px;background:var(--bg);position:relative;overflow:hidden}
+.cta-o1{width:700px;height:700px;background:radial-gradient(circle,rgba(233,69,96,.12),transparent 70%);top:-200px;right:-200px}
+.cta-o2{width:500px;height:500px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);bottom:-200px;left:-100px}
+.ctain{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ctain h2{font-size:2.5rem;font-weight:900;line-height:1.2;margin-bottom:20px}
+.ctain .sub{margin:0 auto 44px;font-size:1rem}
+.cbadges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cbadge{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
+.cbadge svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5}
+
+footer{background:var(--surface);border-top:1px solid var(--b);padding:40px 48px}
+.fi3{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.flogo{font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em}.flogo span{color:var(--r)}
+footer p{font-size:.76rem;color:var(--m2)}
+
+.fi{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.fi.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+@media(max-width:960px){
+  nav{padding:0 24px}.nav-r .nl{display:none}
+  section{padding:80px 24px}#numbers{padding:60px 24px}#logos{padding:40px 24px}
+  .hi{grid-template-columns:1fr}.hcard{display:none}
+  h1.hh{font-size:2.3rem}
+  .cg,.pl,.wg,.tg{grid-template-columns:1fr}
+  .sk-grid{grid-template-columns:repeat(3,1fr)}
+  .ng{grid-template-columns:1fr 1fr}
+  .fs{grid-template-columns:1fr;gap:28px}.fc{display:none}
+  .ctain h2{font-size:2rem}.fi3{flex-direction:column;text-align:center}
+  .logos-row{gap:24px}
+}
+@media(max-width:600px){h1.hh{font-size:2rem}h2{font-size:1.75rem}.hctas{flex-direction:column}.btn-lg{padding:15px 28px}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPGHB3RL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <div class="logo"><img src="akahaiagent_logo.png" alt="akahai agent" style="height:60px;display:block"></div>
+  <div class="nav-r">
+    <a href="#cases" class="nl">案件を見る</a>
+    <a href="#why" class="nl">選ばれる理由</a>
+    <a href="#faq" class="nl">FAQ</a>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn-n" target="_blank">無料で面談を申し込む</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="orb h-o1"></div><div class="orb h-o2"></div>
+  <div class="wrap">
+    <div class="hi">
+      <div>
+        <div class="hbadge fi"><span class="hdot"></span>AIO実務経験者専門 フリーランスマッチング</div>
+        <h1 class="hh fi d1">いま、<br><span class="gt">AIOを実装できる人材</span>が<br>求められています。</h1>
+        <p class="hdesc fi d2">Google AI Overviews、ChatGPT、Gemini、Perplexityなど、AI検索上での可視性向上を担えるAIO・LLMO人材の需要が高まっています。戦略立案、プロンプト設計、コンテンツ改善、テクニカルSEO、効果検証まで。あなたのAIO実務経験を活かせる事業会社・支援会社の非公開案件を、専門エージェントがご紹介します。</p>
+        <div class="hctas fi d3">
+          <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p btn-lg" target="_blank">AIO案件について無料で相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#cases" class="btn btn-g btn-lg">案件を見る</a>
+        </div>
+        <div class="htrust fi d4">
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>登録無料</span>
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>1分で登録完了</span>
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>AIO・LLMO企業案件経験者限定</span>
+        </div>
+        <p style="font-size:.72rem;color:var(--m2);margin-top:12px">※個人での学習・検証、生成AIの利用経験、SEOのみの経験は対象外です。</p>
+      </div>
+      <div class="hcard fi d2">
+        <div class="sg">
+          <div class="sc"><div class="sn nr">4,500</div><div class="sl">平均時間単価（円）</div></div>
+          <div class="sc"><div class="sn no">70<span style="font-size:1.4rem">%</span></div><div class="sl">非公開案件率</div></div>
+          <div class="sc"><div class="sn np">6,000</div><div class="sl">累計登録者数（名）</div></div>
+          <div class="sc"><div class="sn nb">8<span style="font-size:1.4rem">年</span></div><div class="sl">登録人材の平均経験年数</div></div>
+        </div>
+        <p class="snote">※サービス全体の実績数値です</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="logos" style="padding:52px 48px;background:var(--surface)">
+  <div class="logos-wrap">
+    <div class="tc fi">
+      <span class="lbl">Clients</span>
+      <h2>AIO・デジタルマーケティング領域の<br>取引実績企業<span class="gt">（一部）</span></h2>
+    </div>
+    <div class="logos-row fi d1" style="margin-top:48px">
+      <span class="logo-item"><img src="Company_logo_tr/CA.png" alt="CyberAgent"></span>
+      <span class="logo-item"><img src="Company_logo_tr/DDlogo_black.png" alt="dentsu digital"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Hakuhodo_DY_One_logo.png" alt="Hakuhodo DY One"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Speee.png" alt="Speee"></span>
+      <span class="logo-item"><img src="Company_logo_tr/AIDEM.png" alt="AIDEM"></span>
+      <span class="logo-item"><img src="Company_logo_tr/アナグラム.png" alt="アナグラム"></span>
+      <span class="logo-item"><img src="Company_logo_tr/オーリーズ.png" alt="オーリーズ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/グラッドキューブ.png" alt="グラッドキューブ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/デジタリフト_横.png" alt="デジタリフト"></span>
+      <span class="logo-item"><img src="Company_logo_tr/インタースペース.png" alt="インタースペース"></span>
+      <span class="logo-item"><img src="Company_logo_tr/フルスピード.png" alt="フルスピード"></span>
+      <span class="logo-item"><img src="Company_logo_tr/カオナビ.png" alt="カオナビ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/あつまる.png" alt="あつまる"></span>
+      <span class="logo-item"><img src="Company_logo_tr/イングリウッド.png" alt="イングリウッド"></span>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="orb c-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Cases</span>
+      <h2>紹介案件の<span class="gt">例</span></h2>
+      <p class="sub" style="margin-top:14px">AIO・LLMOの実務経験者を対象とした、事業会社・支援会社の非公開案件をご紹介しています。</p>
+    </div>
+    <div class="cg">
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-a">AIOストラテジスト</span><div class="cr">要面談</div></div>
+        <div class="ctitle">大手事業会社　AIO戦略責任者</div>
+        <p class="cdesc">AI検索上の自社・競合調査から、対象プロンプト、KPI、施策ロードマップを設計。SEO、コンテンツ、PR、開発部門を横断してAIOプロジェクトを推進します。</p>
+        <div class="ctags"><span class="ctag2">AIO戦略設計</span><span class="ctag2">競合分析</span><span class="ctag2">週3日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-p">AIOコンサルタント</span><div class="cr">要面談</div></div>
+        <div class="ctitle">BtoB企業　AIO・LLMOコンサルティング</div>
+        <p class="cdesc">ChatGPT、Gemini、Perplexityなどにおけるブランド言及・引用状況を分析。改善施策の提案から実行ディレクション、効果検証までを担当します。</p>
+        <div class="ctags"><span class="ctag2">プロンプト設計</span><span class="ctag2">AI可視性分析</span><span class="ctag2">週2日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-c">AIOコンテンツディレクター</span><div class="cr">要面談</div></div>
+        <div class="ctitle">SaaS企業　AIOコンテンツ改善</div>
+        <p class="cdesc">AI回答や引用元の分析をもとに、サービスページ、FAQ、比較記事、導入事例などを企画・改善。制作チームのディレクションも担います。</p>
+        <div class="ctags"><span class="ctag2">コンテンツ設計</span><span class="ctag2">引用元分析</span><span class="ctag2">週3日〜</span><span class="ctag2">フルリモート</span></div>
+      </div>
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-a">テクニカルAIO・SEO</span><div class="cr">要面談</div></div>
+        <div class="ctitle">大規模サイト　テクニカルAIO支援</div>
+        <p class="cdesc">クロール・インデックス、サイト構造、内部リンク、構造化データなどを診断。開発担当者と連携し、AI・検索エンジンが情報を理解しやすい環境を整備します。</p>
+        <div class="ctags"><span class="ctag2">テクニカルSEO</span><span class="ctag2">構造化データ</span><span class="ctag2">週2日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-g">AIOデータアナリスト</span><div class="cr">要面談</div></div>
+        <div class="ctitle">事業会社　AI検索モニタリング構築</div>
+        <p class="cdesc">対象プロンプトにおける自社・競合の言及率、引用率、Share of Voiceを計測。GA4、Search Consoleと組み合わせて施策成果を分析します。</p>
+        <div class="ctags"><span class="ctag2">AIOモニタリング</span><span class="ctag2">GA4・GSC</span><span class="ctag2">週2日〜</span><span class="ctag2">フルリモート</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-p">AIOプロジェクトマネージャー</span><div class="cr">要面談</div></div>
+        <div class="ctitle">大手企業　AIOプロジェクト推進</div>
+        <p class="cdesc">AIO戦略に基づき、SEO、コンテンツ、PR、広報、開発などの関係部署を統括。施策の進行管理、品質管理、経営層への報告を担当します。</p>
+        <div class="ctags"><span class="ctag2">プロジェクト管理</span><span class="ctag2">部門横断推進</span><span class="ctag2">週3日〜</span><span class="ctag2">一部出社</span></div>
+      </div>
+    </div>
+    <div class="cf fi">
+      <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" target="_blank">まずは無料相談　→</a>
+      <p class="cn">※ 掲載は一部です。非公開案件を含む全案件は面談後にご紹介します</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="tc fi">
+      <span class="lbl">Skills</span>
+      <h2>活かせる<span class="gt">スキル</span></h2>
+      <p class="sub" style="margin-top:14px">AIOの戦略立案から施策実行、効果検証まで、企業案件で培った専門スキルを求めています。</p>
+    </div>
+    <div class="sk-grid fi d1">
+      <div class="sk-tag">AIO・LLMO<br>戦略立案</div>
+      <div class="sk-tag">対象プロンプト<br>設計</div>
+      <div class="sk-tag">AI検索上の<br>競合分析</div>
+      <div class="sk-tag">ブランド<br>言及率分析</div>
+      <div class="sk-tag">引用元・<br>参照元分析</div>
+      <div class="sk-tag">AI Share of<br>Voice分析</div>
+      <div class="sk-tag">Google AI<br>Overviews分析</div>
+      <div class="sk-tag">ChatGPT・Gemini<br>Perplexity分析</div>
+      <div class="sk-tag">SEO戦略設計</div>
+      <div class="sk-tag">テクニカルSEO</div>
+      <div class="sk-tag">構造化<br>データ設計</div>
+      <div class="sk-tag">AIOコンテンツ<br>設計</div>
+      <div class="sk-tag">FAQ・比較・<br>事例企画</div>
+      <div class="sk-tag">一次情報・<br>独自調査企画</div>
+      <div class="sk-tag">GA4・<br>Search Console</div>
+      <div class="sk-tag">ダッシュボード<br>構築</div>
+      <div class="sk-tag">PR・<br>エンティティ設計</div>
+      <div class="sk-tag">プロジェクト<br>マネジメント</div>
+    </div>
+    <p class="sk-note fi d2">案件によって業務内容・単価・稼働条件は異なります。<br>これまで担当したAIO案件の業務範囲や実績を面談時にお聞かせください。経験に合った案件をご紹介します。</p>
+  </div>
+</section>
+
+<section id="target">
+  <div class="wrap">
+    <div class="tg">
+      <div class="tg-left fi">
+        <span class="lbl">For Whom</span>
+        <h2>こんな<span class="gt">AIO実務経験者</span>を<br>お待ちしています</h2>
+        <p class="sub">AIO・LLMOの企業案件に参画し、調査や提案だけでなく、施策実行・ディレクション・効果検証まで経験している方を対象としています。</p>
+        <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" style="margin-top:32px" target="_blank">まずは無料相談　→</a>
+      </div>
+      <div class="fi d1">
+        <div class="tg-list">
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>AIO・LLMOの企業案件経験がある</h4><p>事業会社またはクライアント企業に対し、AIO・LLMO施策を提供・推進した実務経験をお持ちの方。</p></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>戦略から実行まで担当できる</h4><p>現状分析だけでなく、プロンプト設計、コンテンツ、SEO、PR、テクニカル施策などを実行・推進できる方。</p></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>実績と担当範囲を説明できる</h4><p>担当したAI検索サービス、業務範囲、実施施策、施策前後の変化を具体的に説明できる方。</p></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>即レス・納期厳守・高品質を徹底できる</h4><p>業務委託のプロフェッショナルとして、連絡、定例会議、納期、成果物の品質に責任を持てる方。</p></div>
+          </div>
+        </div>
+        <div class="tg-ng">
+          <div class="tg-ng-label">こんな方はご対応が難しい場合があります</div>
+          <div class="tg-ng-list">
+            <span class="tg-ng-item">AIO・LLMOの企業案件経験がない方</span>
+            <span class="tg-ng-item">SEO経験のみで、AIO施策を担当したことがない方</span>
+            <span class="tg-ng-item">個人での学習・自主検証のみの方</span>
+            <span class="tg-ng-item">生成AIツールを使用した経験しかない方</span>
+            <span class="tg-ng-item">提案のみで、施策実行や効果検証の経験がない方</span>
+            <span class="tg-ng-item">副業で夜間・休日しか稼働できない方</span>
+            <span class="tg-ng-item">週1日程度の稼働のみを希望する方</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pain">
+  <div class="wrap">
+    <div class="pl">
+      <div class="fi">
+        <span class="lbl">Pain Points</span>
+        <h2>こんなお悩み、<br><span class="gt">ありませんか？</span></h2>
+        <p class="sub">AIOの実務経験を積んできたものの、専門性に合う案件や評価に出会えていないと感じていませんか。</p>
+        <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" style="margin-top:32px" target="_blank">まずは無料相談　→</a>
+      </div>
+      <div class="pr">
+        <div class="pc fi d1"><div class="pi"></div><div class="pb"><h3>AIOの専門性を正しく評価されない</h3><p>AIO案件を経験していても、単なるSEO担当や生成AI担当として扱われ、戦略設計やプロジェクト推進の経験まで評価されない。</p></div></div>
+        <div class="pc fi d2"><div class="pi"></div><div class="pb"><h3>上流から関われるAIO案件が少ない</h3><p>簡易的な調査や記事制作ではなく、経営・事業課題に基づくAIO戦略や施策設計から関わりたい。</p></div></div>
+        <div class="pc fi d3"><div class="pi"></div><div class="pb"><h3>募集内容と実際の業務が異なる</h3><p>AIO案件として参画したものの、実際には生成AIを使った記事作成や、従来のSEO業務だけを求められた。</p></div></div>
+        <div class="pc fi d4"><div class="pi"></div><div class="pb"><h3>実績に見合った報酬を得られていない</h3><p>AIO戦略、SEO、コンテンツ、データ分析、プロジェクト管理まで担っているのに、専門性に見合う単価が提示されない。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="orb w-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Why Akahai</span>
+      <h2>選ばれる<span class="gp">3つの理由</span></h2>
+      <p class="sub" style="margin-top:14px">AIO・デジタルマーケティング領域を理解しているからこそ、経験と案件を正しくマッチングできます。</p>
+    </div>
+    <div class="wg">
+      <div class="wc fi d1"><div class="wn">01</div><h3>AIOの経験領域を正確に評価</h3><p>AIO経験を一括りにせず、戦略、コンテンツ、テクニカル、データ分析、PR、プロジェクト管理など、実際の担当範囲を確認します。「AIO経験あり」という表面的な情報だけでなく、何を設計し、どこまで実行し、どのような変化を生み出したかを整理したうえで、適切な案件をご提案します。</p></div>
+      <div class="wc fi d2"><div class="wn">02</div><h3>事業会社を中心とした非公開案件</h3><p>一般には公開されていないAIO・LLMO案件をご紹介します。事業会社のAIO戦略責任者、コンテンツ改善、テクニカルSEO、分析基盤構築、プロジェクトマネジメントなど、経験に合ったポジションへアクセスできます。単価や稼働条件の交渉もエージェントが代行します。</p></div>
+      <div class="wc fi d3"><div class="wn">03</div><h3>案件開始後も続く伴走サポート</h3><p>案件への参画で終わりではありません。業務範囲の認識調整、契約更新、稼働条件の相談、単価交渉、次の案件紹介まで、長期的なパートナーとしてフリーランス活動を支援します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="orb f-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">How it Works</span>
+      <h2>ご利用の<span class="gt">流れ</span></h2>
+      <p class="sub" style="margin-top:14px">実務経験と希望条件を確認し、専門性に合ったAIO案件をご紹介します。</p>
+    </div>
+    <div class="fs">
+      <div class="fc"></div>
+      <div class="fst fi d1"><div class="fd">1</div><h3>無料登録</h3><p>1分でフォーム入力完了。面談日時をご予約ください。</p></div>
+      <div class="fst fi d2"><div class="fd">2</div><h3>実績ヒアリング</h3><p>オンライン面談で、担当したAIO案件、業務範囲、施策内容、成果、希望条件を確認します。</p></div>
+      <div class="fst fi d3"><div class="fd">3</div><h3>案件紹介</h3><p>非公開案件を含め、経験・専門性・稼働条件に合う案件をご提案します。</p></div>
+      <div class="fst fi d4"><div class="fd">4</div><h3>単価交渉・契約</h3><p>業務範囲、成果物、稼働時間、報酬などの条件交渉をエージェントが代行します。</p></div>
+      <div class="fst fi d5"><div class="fd">5</div><h3>稼働・継続支援</h3><p>稼働開始後も継続的にフォロー。契約更新、単価交渉、次回案件もサポートします。</p></div>
+    </div>
+    <div class="fca fi"><a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" target="_blank">まずは無料相談　→</a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="tc fi"><span class="lbl">FAQ</span><h2>よくある<span class="gt">質問</span></h2></div>
+    <div class="fi2">
+      <div class="fqi fi"><button class="fq">登録は無料ですか？<span class="fqic">+</span></button><div class="fa"><div class="fain">はい。登録、面談、案件紹介はすべて無料です。</div></div></div>
+      <div class="fqi fi d1"><button class="fq">AIOの実務経験がなくても登録できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">本ページで募集している案件は、AIO・LLMOの企業案件経験者限定です。個人での学習・検証、生成AIツールの利用経験、SEOのみの経験では、現在案件をご紹介しておりません。</div></div></div>
+      <div class="fqi fi d2"><button class="fq">SEO経験があれば登録できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">SEO経験に加えて、AIO・LLMO施策を企業案件として担当した経験が必要です。Google AI Overviews、ChatGPT、Gemini、Perplexityなどを対象に、調査、施策設計、実行、効果検証のいずれかを担当した経験を確認します。</div></div></div>
+      <div class="fqi fi d3"><button class="fq">守秘義務があり、企業名や成果数値を公開できません<span class="fqic">+</span></button><div class="fa"><div class="fain">企業名や具体的な数値を開示できない場合でも登録可能です。業界、サービス、担当範囲、実施施策、使用ツール、成果の方向性など、守秘義務に抵触しない範囲でご説明ください。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">副業・兼業でも利用できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">案件によって異なりますが、平日日中に一定の稼働時間を確保できる方が主な対象です。夜間・休日のみ、または週1日程度しか稼働できない場合、案件紹介が難しい可能性があります。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">どのようなAIO案件がありますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">AIO戦略立案、AI検索上の競合分析、プロンプト設計、コンテンツ改善、テクニカルSEO、モニタリング環境構築、プロジェクトマネジメントなどがあります。事業会社のマーケティング部門を支援する案件を中心に、経験や専門性に応じてご紹介します。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">契約期間はどのくらいですか？<span class="fqic">+</span></button><div class="fa"><div class="fain">案件ごとに異なりますが、原則として一定期間ごとの更新契約となります。具体的な契約期間、更新条件、想定稼働時間は案件紹介時にご説明します。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="orb cta-o1"></div><div class="orb cta-o2"></div>
+  <div class="ctain fi">
+    <span class="lbl" style="justify-content:center">Contact</span>
+    <h2><span class="gt">AIOの実務経験を、<br>次のプロジェクトへ。</span></h2>
+    <p class="sub">担当したAIO・LLMO案件の業務範囲や実績をお聞かせください。専任コンサルタントが、事業会社の非公開案件を含む、経験・専門性に合ったAIO案件をご提案します。</p>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" target="_blank">AIO案件について無料で相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="cbadges">
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>登録無料</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>1分で登録完了</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>AIO・LLMO企業案件経験者限定</span>
+    </div>
+    <p style="font-size:.72rem;color:var(--m2);margin-top:12px">※個人での学習・検証、生成AIの利用経験、SEOのみの経験は対象外です。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="fi3">
+    <div class="flogo"><img src="akahaiagent_logo.png" alt="akahai agent" style="height:28px;display:block"></div>
+    <p>AIO・デジタルマーケティング特化のフリーランスマッチングサービス</p>
+    <p>© 2024 アカハイエージェント All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('v') })
+}, {threshold: 0.12});
+document.querySelectorAll('.fi').forEach(el => io.observe(el));
+
+document.querySelectorAll('.fq').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.fq.open').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.style.maxHeight = null;
+    });
+    if(!isOpen) {
+      btn.classList.add('open');
+      const fa = btn.nextElementSibling;
+      fa.style.maxHeight = fa.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
