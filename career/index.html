@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アカハイエージェント | 広告運用職への転職支援・20代マーケティング職専門エージェント</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TPGHB3RL');</script>
+<!-- End Google Tag Manager -->
+<link rel="icon" href="akahaiagent_favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FFFFFF;--surface:#F5F5F8;
+  --b:rgba(0,0,0,0.08);--bb:rgba(0,0,0,0.15);
+  --r:#E94560;--o:#FF6B35;--p:#7C3AED;
+  --t:#111118;--m:#666680;--m2:#999AB0;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.gt{background:linear-gradient(135deg,var(--r) 0%,var(--o) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gp{background:linear-gradient(135deg,var(--r) 0%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
+.btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s}.btn-n:hover{opacity:.85}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.97rem;padding:15px 32px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:all .25s;font-family:'Noto Sans JP',sans-serif}
+.btn-p{background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 4px 24px rgba(233,69,96,.35)}.btn-p:hover{box-shadow:0 6px 36px rgba(233,69,96,.55);transform:translateY(-2px)}
+.btn-g{background:rgba(255,255,255,.05);color:var(--t);border:1px solid var(--bb);backdrop-filter:blur(8px)}.btn-g:hover{background:rgba(255,255,255,.09)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;flex-shrink:0}
+.btn-lg{padding:17px 42px;font-size:1.02rem;border-radius:10px}
+
+/* LAYOUT */
+section{padding:110px 48px;position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.lbl{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--r);margin-bottom:16px}.lbl::before{content:'';width:16px;height:1px;background:var(--r)}
+h2{font-size:2.2rem;font-weight:900;line-height:1.25;margin-bottom:16px}
+.sub{color:var(--m);font-size:.95rem;line-height:1.9;max-width:580px}
+.tc{text-align:center}.tc .sub{margin:0 auto}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+
+/* HERO */
+#hero{display:flex;align-items:center;padding:120px 48px 80px;background:var(--bg);overflow:hidden}
+.h-o1{width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.18),transparent 70%);top:-100px;right:-100px}
+.h-o2{width:400px;height:400px;background:radial-gradient(circle,rgba(155,89,255,.12),transparent 70%);bottom:-50px;left:-80px}
+.hi{display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:center;position:relative;z-index:1}
+.hbadge{display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--r);margin-bottom:28px;border-bottom:2px solid var(--r);padding-bottom:4px;line-height:1.6}
+h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;letter-spacing:-.02em}
+.hdesc{color:var(--m);font-size:1rem;line-height:1.9;margin-bottom:40px;max-width:520px}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.htrust{display:flex;gap:22px;flex-wrap:wrap}
+.ti{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
+.ti svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5;flex-shrink:0}
+.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.6),rgba(255,107,53,.6),transparent)}
+.hch{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--m);margin-bottom:20px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sc{background:var(--surface);border:1px solid var(--b);border-radius:12px;padding:18px 16px}
+.sn{font-family:'Inter',sans-serif;font-size:2.6rem;font-weight:900;line-height:1;margin-bottom:4px}
+.sl{font-size:.72rem;color:var(--m)}
+.nr{color:var(--r)}.no{color:var(--o)}.np{color:var(--p)}.nb{color:#5BA8FF}
+
+/* LOGOS */
+#logos{background:var(--surface);padding:52px 48px}
+.logos-wrap{max-width:1180px;margin:0 auto}
+.logos-row{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px}
+.logo-item{display:flex;align-items:center;justify-content:center;height:48px;padding:0 8px}
+.logo-item img{height:100%;width:auto;max-width:120px;object-fit:contain}
+.logos-note{text-align:center;font-size:.72rem;color:var(--m2);margin-top:24px}
+
+/* CASES / JOBS */
+#cases{background:var(--bg)}
+.c-o{width:500px;height:500px;background:radial-gradient(circle,rgba(233,69,96,.07),transparent 70%);top:50%;right:-150px;transform:translateY(-50%)}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.cc{background:#fff;border:1px solid var(--b);border-radius:16px;padding:28px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.05);display:flex;flex-direction:column}
+.cc::after{content:'';position:absolute;inset:0;border-radius:16px;opacity:0;background:linear-gradient(135deg,rgba(233,69,96,.06),rgba(255,107,53,.03));transition:opacity .3s}
+.cc:hover{border-color:rgba(233,69,96,.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}.cc:hover::after{opacity:1}
+.ct{display:flex;align-items:flex-start;margin-bottom:10px}
+.cb{font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.05em}
+.cb-a{background:rgba(233,69,96,.12);color:var(--r)}.cb-p{background:rgba(255,107,53,.12);color:var(--o)}.cb-c{background:rgba(91,168,255,.12);color:#5BA8FF}.cb-g{background:rgba(124,58,237,.12);color:var(--p)}
+.ctitle{font-size:.92rem;font-weight:700;margin-bottom:10px;line-height:1.5}
+.cdesc{font-size:.82rem;color:var(--m);line-height:1.75;margin-bottom:16px;flex:1}
+.ctags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.ctag2{font-size:.68rem;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid var(--b);color:var(--m);font-weight:500}
+.cf{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:44px}
+.cn{font-size:.78rem;color:var(--m2);text-align:center}
+
+/* SKILLS */
+#skills{background:var(--surface);padding:80px 48px}
+.sk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:36px}
+.sk-tag{background:#fff;border:1px solid var(--b);border-radius:12px;padding:18px 12px;text-align:center;font-size:.84rem;font-weight:600;color:var(--t);line-height:1.4;transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;min-height:72px}
+.sk-tag:hover{border-color:rgba(233,69,96,.3);box-shadow:0 4px 16px rgba(233,69,96,.08)}
+.sk-note{margin-top:28px;text-align:center;font-size:.82rem;color:var(--m);line-height:2}
+
+/* TARGET */
+#target{background:var(--bg);padding-bottom:40px}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.tg-left .sub{margin-top:16px}
+.tg-list{display:flex;flex-direction:column}
+.tg-item{padding:18px 0;border-bottom:1px solid var(--b)}
+.tg-item:first-child{border-top:1px solid var(--b)}
+.tg-item h4{font-size:.92rem;font-weight:700;margin-bottom:4px;padding-left:14px;border-left:2px solid var(--r)}
+.tg-item p{font-size:.8rem;color:var(--m);line-height:1.7;padding-left:14px}
+.tg-ng{margin-top:20px;padding:16px 20px;border-radius:12px;background:rgba(0,0,0,.02);border:1px solid var(--b)}
+.tg-ng-label{font-size:.72rem;font-weight:700;color:var(--m2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.tg-ng-list{display:flex;flex-direction:column;gap:6px}
+.tg-ng-item{font-size:.82rem;color:var(--m);display:flex;align-items:flex-start;gap:8px;line-height:1.6}
+.tg-ng-item::before{content:'×';color:var(--m2);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* PAIN */
+#pain{background:var(--surface)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.pr{display:flex;flex-direction:column}
+.pc{padding:18px 0;border-bottom:1px solid var(--b)}
+.pc:first-child{border-top:1px solid var(--b)}
+.pc h3{font-size:.92rem;font-weight:700;margin-bottom:6px;padding-left:14px;border-left:2px solid var(--r)}
+.pc p{font-size:.82rem;color:var(--m);line-height:1.75;padding-left:14px}
+.pain-note{margin-top:40px;padding:28px 32px;border-radius:16px;background:#fff;border:1px solid var(--b);box-shadow:0 2px 16px rgba(0,0,0,.04)}
+.pain-note h3{font-size:1rem;font-weight:700;line-height:1.6;margin-bottom:12px}
+.pain-note p{font-size:.88rem;color:var(--m);line-height:1.9}
+
+/* WHY */
+#why{background:var(--bg)}
+.w-o{width:600px;height:600px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);top:0;left:-200px}
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.wc{background:#fff;border:1px solid var(--b);border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 2px 16px rgba(0,0,0,0.05)}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:opacity .3s}
+.wc:hover{border-color:rgba(155,89,255,.25);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.08)}.wc:hover::before{opacity:1}
+.wn{font-family:'Inter',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;margin-bottom:18px;color:rgba(0,0,0,.06)}
+.wc h3{font-size:1rem;font-weight:700;margin-bottom:12px;line-height:1.4}
+.wc p{font-size:.84rem;color:var(--m);line-height:1.85}
+
+/* FLOW */
+#flow{background:var(--surface)}
+.f-o{width:400px;height:400px;background:radial-gradient(circle,rgba(233,69,96,.08),transparent 70%);bottom:-100px;right:-50px}
+.fs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;position:relative}
+.fc{position:absolute;top:28px;left:calc(10% + 28px);right:calc(10% + 28px);height:1px;background:linear-gradient(90deg,var(--r),var(--o),var(--p));opacity:.2}
+.fst{text-align:center;padding:0 16px;position:relative;z-index:1}
+.fd{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 24px rgba(233,69,96,.4);position:relative}
+.fd::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(233,69,96,.25)}
+.fst h3{font-size:.85rem;font-weight:700;margin-bottom:8px}
+.fst p{font-size:.78rem;color:var(--m);line-height:1.7}
+.fca{text-align:center;margin-top:52px;position:relative;z-index:1}
+
+/* FAQ */
+#faq{background:var(--bg)}
+.fi2{max-width:760px;margin:52px auto 0}
+.fqi{border-bottom:1px solid var(--b)}
+.fq{width:100%;background:none;border:none;color:var(--t);font-family:'Noto Sans JP',sans-serif;font-size:.95rem;font-weight:700;padding:22px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:16px}
+.fqic{width:30px;height:30px;border-radius:50%;flex-shrink:0;border:1px solid var(--bb);display:flex;align-items:center;justify-content:center;color:var(--r);font-size:1.3rem;line-height:1;transition:transform .35s,background .2s,border-color .2s}
+.fq.open .fqic{transform:rotate(45deg);background:rgba(233,69,96,.1);border-color:rgba(233,69,96,.3)}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.fain{padding:0 0 22px;font-size:.88rem;color:var(--m);line-height:1.9}
+
+/* CTA */
+#cta{padding:130px 48px;background:var(--bg);position:relative;overflow:hidden}
+.cta-o1{width:700px;height:700px;background:radial-gradient(circle,rgba(233,69,96,.12),transparent 70%);top:-200px;right:-200px}
+.cta-o2{width:500px;height:500px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);bottom:-200px;left:-100px}
+.ctain{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ctain h2{font-size:2.3rem;font-weight:900;line-height:1.3;margin-bottom:20px}
+.ctain .sub{margin:0 auto 44px;font-size:1rem}
+.cbadges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cbadge{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
+.cbadge svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5}
+
+/* FORM */
+#form{padding:110px 48px;background:var(--surface);position:relative;overflow:hidden}
+.form-inner{max-width:720px;margin:0 auto}
+.form-box{background:#fff;border:1px solid var(--b);border-radius:24px;padding:52px 48px;box-shadow:0 8px 48px rgba(0,0,0,.06);position:relative;overflow:hidden;margin-top:52px}
+.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--r),var(--o))}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:700;color:var(--t)}
+label .req{color:var(--r);margin-left:4px;font-size:.75rem}
+label .opt{color:var(--m2);margin-left:4px;font-size:.72rem;font-weight:400}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font-family:'Noto Sans JP',sans-serif;font-size:.9rem;color:var(--t);background:#fff;border:1px solid var(--bb);border-radius:8px;padding:11px 14px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{border-color:var(--r);box-shadow:0 0 0 3px rgba(233,69,96,.1)}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999AB0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+textarea{resize:vertical;min-height:100px}
+.form-submit{margin-top:28px;text-align:center}
+.form-submit .btn-p{width:100%;justify-content:center;font-size:1rem;padding:18px 32px}
+.form-note{margin-top:16px;text-align:center;font-size:.75rem;color:var(--m2);line-height:1.8}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--b);padding:40px 48px}
+.fi3{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+footer p{font-size:.76rem;color:var(--m2)}
+
+/* ANIMATION */
+.fi{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.fi.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:0 24px}.nav-r .nl{display:none}
+  section{padding:80px 24px}#logos{padding:40px 24px}#skills{padding:60px 24px}#form{padding:80px 24px}
+  .hi{grid-template-columns:1fr}.hcard{display:none}
+  h1.hh{font-size:2.3rem}
+  .cg,.pl,.wg,.tg{grid-template-columns:1fr}
+  .sk-grid{grid-template-columns:repeat(3,1fr)}
+  .fs{grid-template-columns:1fr;gap:28px}.fc{display:none}
+  .ctain h2{font-size:2rem}.fi3{flex-direction:column;text-align:center}
+  .logos-row{gap:24px}
+  .form-row{grid-template-columns:1fr}
+  .form-box{padding:36px 24px}
+  .pain-note{padding:20px}
+}
+@media(max-width:600px){
+  h1.hh{font-size:1.9rem}h2{font-size:1.75rem}.hctas{flex-direction:column}.btn-lg{padding:15px 28px;font-size:.9rem}
+  .sk-grid{grid-template-columns:repeat(2,1fr)}
+  .ctain h2{font-size:1.7rem}
+  .hbadge{font-size:.72rem}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPGHB3RL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- 1. HEADER -->
+<nav>
+  <div><img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:60px;display:block"></div>
+  <div class="nav-r">
+    <a href="#cases" class="nl">求人例</a>
+    <a href="#why" class="nl">選ばれる理由</a>
+    <a href="#flow" class="nl">ご利用の流れ</a>
+    <a href="#faq" class="nl">よくある質問</a>
+    <a href="#form" class="btn-n">無料でキャリア相談する</a>
+  </div>
+</nav>
+
+<!-- 2. FIRST VIEW -->
+<section id="hero">
+  <div class="orb h-o1"></div><div class="orb h-o2"></div>
+  <div class="wrap">
+    <div class="hi">
+      <div>
+        <div class="hbadge fi">20代・広告運用未経験者向け　マーケティング職専門転職エージェント</div>
+        <h1 class="hh fi d1">広告運用は未経験でも、<br><span class="gt">これまでの経験は</span><br>未経験ではない。</h1>
+        <p class="hdesc fi d2">営業力、提案力、顧客理解、数値管理。<br>これまでの仕事で身につけた経験を活かして、広告運用職へのキャリアチェンジを目指しませんか？<br>広告代理店が運営するマーケティング職専門エージェントが、求人選びから書類添削、面接対策までサポートします。</p>
+        <div class="hctas fi d3">
+          <a href="#form" class="btn btn-p btn-lg">広告運用職への転職を無料相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#cases" class="btn btn-g btn-lg">求人例を見る</a>
+        </div>
+        <div class="htrust fi d4">
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>求職者の利用料金0円</span>
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>オンライン面談</span>
+          <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>転職時期未定でも相談可能</span>
+        </div>
+      </div>
+      <div class="hcard fi d2">
+        <div class="hch">サービスの特徴</div>
+        <div class="sg">
+          <div class="sc"><div class="sn nr" style="font-size:1.1rem;font-weight:900;line-height:1.4">広告代理店<br>が運営</div><div class="sl">現場を知るエージェント</div></div>
+          <div class="sc"><div class="sn no" style="font-size:1.1rem;font-weight:900;line-height:1.4">マーケ職<br>に特化</div><div class="sl">デジタル領域の求人のみ</div></div>
+          <div class="sc"><div class="sn np" style="font-size:1.1rem;font-weight:900;line-height:1.4">書類・面接<br>対策まで</div><div class="sl">内定まで一貫サポート</div></div>
+          <div class="sc"><div class="sn nb" style="font-size:1.1rem;font-weight:900;line-height:1.4">利用料金<br>0円</div><div class="sl">求職者は完全無料</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COMPANY LOGOS -->
+<section id="logos">
+  <div class="logos-wrap">
+    <div class="tc fi">
+      <span class="lbl">Track Record</span>
+      <h2>広告代理店・マーケティング企業との<span class="gt">取引実績</span></h2>
+    </div>
+    <div class="logos-row fi d1">
+      <span class="logo-item"><img src="Company_logo_tr/CA.png" alt="CyberAgent"></span>
+      <span class="logo-item"><img src="Company_logo_tr/DDlogo_black.png" alt="dentsu digital"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Hakuhodo_DY_One_logo.png" alt="Hakuhodo DY One"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Speee.png" alt="Speee"></span>
+      <span class="logo-item"><img src="Company_logo_tr/AIDEM.png" alt="AIDEM"></span>
+      <span class="logo-item"><img src="Company_logo_tr/アナグラム.png" alt="アナグラム"></span>
+      <span class="logo-item"><img src="Company_logo_tr/オーリーズ.png" alt="オーリーズ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/グラッドキューブ.png" alt="グラッドキューブ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/デジタリフト_横.png" alt="デジタリフト"></span>
+      <span class="logo-item"><img src="Company_logo_tr/インタースペース.png" alt="インタースペース"></span>
+      <span class="logo-item"><img src="Company_logo_tr/フルスピード.png" alt="フルスピード"></span>
+      <span class="logo-item"><img src="Company_logo_tr/カオナビ.png" alt="カオナビ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/あつまる.png" alt="あつまる"></span>
+      <span class="logo-item"><img src="Company_logo_tr/イングリウッド.png" alt="イングリウッド"></span>
+    </div>
+    <p class="logos-note fi d2">※人材紹介、業務委託、マーケティング支援等を含む当社グループの取引実績です。</p>
+  </div>
+</section>
+
+<!-- 4. JOB EXAMPLES -->
+<section id="cases">
+  <div class="orb c-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Jobs</span>
+      <h2>未経験から挑戦できる<br><span class="gt">広告・マーケティング求人</span></h2>
+      <p class="sub" style="margin-top:14px">広告運用の経験がなくても、営業経験、顧客対応経験、数値管理経験などを活かして挑戦できる求人をご紹介します。</p>
+    </div>
+    <div class="cg">
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-a">Web広告代理店</span></div>
+        <div class="ctitle">広告運用アシスタント</div>
+        <p class="cdesc">Google広告、Yahoo!広告、Meta広告などの入稿、データ集計、レポート作成からスタートします。研修やOJTを通じて、広告配信結果の分析や改善提案まで担当します。</p>
+        <div class="ctags"><span class="ctag2">広告業界未経験可</span><span class="ctag2">研修・OJTあり</span><span class="ctag2">営業経験歓迎</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-p">デジタル広告代理店</span></div>
+        <div class="ctitle">Web広告コンサルタント</div>
+        <p class="cdesc">クライアントへのヒアリング、広告戦略の設計、配信結果の分析、改善提案などを担当します。法人営業や無形商材営業で培った顧客折衝力や提案力を活かせます。</p>
+        <div class="ctags"><span class="ctag2">法人営業経験歓迎</span><span class="ctag2">顧客折衝あり</span><span class="ctag2">広告運用へキャリアチェンジ</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-c">総合広告代理店・Web広告代理店</span></div>
+        <div class="ctitle">デジタルアカウントプランナー</div>
+        <p class="cdesc">企業のマーケティング課題をヒアリングし、Web広告やSNSを活用した施策を提案します。営業経験を活かしながら、広告やデジタルマーケティングの知識を身につけられるポジションです。</p>
+        <div class="ctags"><span class="ctag2">無形商材営業歓迎</span><span class="ctag2">クライアントワーク</span><span class="ctag2">広告業界未経験可</span></div>
+      </div>
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-g">SNSマーケティング会社</span></div>
+        <div class="ctitle">SNS広告運用担当</div>
+        <p class="cdesc">Instagram、Facebook、TikTokなどの広告配信を担当します。配信結果を分析し、ターゲット設定や広告クリエイティブを改善します。</p>
+        <div class="ctags"><span class="ctag2">SNS広告</span><span class="ctag2">データ分析</span><span class="ctag2">クリエイティブ改善</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-a">事業会社</span></div>
+        <div class="ctitle">Webマーケティング担当候補</div>
+        <p class="cdesc">広告代理店との連携、マーケティング施策の進行管理、数値集計、WebサイトやLPの改善などを担当します。アシスタント業務からスタートし、Webマーケターを目指せるポジションです。</p>
+        <div class="ctags"><span class="ctag2">事業会社</span><span class="ctag2">Excel経験歓迎</span><span class="ctag2">マーケター候補</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-p">Web広告代理店</span></div>
+        <div class="ctitle">Web広告営業</div>
+        <p class="cdesc">クライアントに対して、Web広告を活用した集客施策を提案します。これまでの営業経験を活かしながら、広告やマーケティングの知識を身につけられます。</p>
+        <div class="ctags"><span class="ctag2">営業経験を活かす</span><span class="ctag2">広告業界未経験可</span><span class="ctag2">運用職へのキャリアあり</span></div>
+      </div>
+    </div>
+    <div class="cf fi">
+      <a href="#form" class="btn btn-p">広告運用職への転職を無料相談する　→</a>
+      <p class="cn">※掲載求人は一例です。ご経験、希望条件、募集状況によって、ご紹介可能な求人は異なります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. APPLICABLE EXPERIENCE -->
+<section id="skills">
+  <div class="wrap">
+    <div class="tc fi">
+      <span class="lbl">Experience</span>
+      <h2>広告運用の経験がなくても、<br><span class="gt">活かせる経験があります。</span></h2>
+      <p class="sub" style="margin-top:14px">企業が見ているのは、広告運用経験の有無だけではありません。これまでの仕事で身につけた考え方や行動経験が、広告運用職への転職で評価されることがあります。</p>
+    </div>
+    <div class="sk-grid fi d1">
+      <div class="sk-tag">法人営業</div>
+      <div class="sk-tag">無形商材営業</div>
+      <div class="sk-tag">顧客への<br>ヒアリング</div>
+      <div class="sk-tag">課題に合わせた<br>提案</div>
+      <div class="sk-tag">目標・KPI管理</div>
+      <div class="sk-tag">売上データの<br>分析</div>
+      <div class="sk-tag">Excel・<br>スプレッドシート</div>
+      <div class="sk-tag">資料作成・<br>プレゼン</div>
+      <div class="sk-tag">社内外との<br>進行管理</div>
+      <div class="sk-tag">カスタマー<br>サクセス</div>
+      <div class="sk-tag">EC・店舗運営</div>
+      <div class="sk-tag">SNSアカウント<br>運用</div>
+      <div class="sk-tag">Webサイト更新</div>
+      <div class="sk-tag">業務改善</div>
+      <div class="sk-tag">PDCAを回した<br>経験</div>
+      <div class="sk-tag">マーケティングの<br>自主学習</div>
+    </div>
+    <p class="sk-note fi d2">これまでの経験を、広告運用職の選考で評価される言葉に置き換え、<br>職務経歴書や面接で伝えられる状態に整理します。</p>
+  </div>
+</section>
+
+<!-- 6. TARGET -->
+<section id="target">
+  <div class="wrap">
+    <div class="tg">
+      <div class="tg-left fi">
+        <span class="lbl">For Whom</span>
+        <h2>こんな20代の方を<br><span class="gt">お待ちしています</span></h2>
+        <p class="sub">広告運用職への興味だけでなく、これまでの社会人経験を活かして専門性を身につけたい方に適したサービスです。</p>
+        <a href="#form" class="btn btn-p" style="margin-top:32px">まずは無料相談　→</a>
+      </div>
+      <div class="fi d1">
+        <div class="tg-list">
+          <div class="tg-item"><h4>広告・マーケティング業界へ転職したい</h4><p>広告運用、Webマーケティング、SNSマーケティングなど、デジタル領域の仕事へキャリアチェンジしたい方。</p></div>
+          <div class="tg-item"><h4>営業や顧客対応の経験がある</h4><p>法人営業、無形商材営業、カスタマーサクセスなどで、顧客の要望を聞き、提案した経験がある方。</p></div>
+          <div class="tg-item"><h4>数字をもとに仕事を改善した経験がある</h4><p>売上、商談数、受注率、継続率などの数字を確認し、行動や提案を改善した経験がある方。</p></div>
+          <div class="tg-item"><h4>自分でも学習を始めている</h4><p>広告やマーケティングについて、本、Webサイト、動画、資格、スクールなどを通じて学び始めている方。</p></div>
+        </div>
+        <div class="tg-ng">
+          <div class="tg-ng-label">次のような場合は、すぐに求人をご紹介できないことがあります</div>
+          <div class="tg-ng-list">
+            <span class="tg-ng-item">広告運用を楽そうな仕事だと考えている</span>
+            <span class="tg-ng-item">数字を扱う仕事を避けたい</span>
+            <span class="tg-ng-item">広告やマーケティングを学ぶ意思がない</span>
+            <span class="tg-ng-item">仕事内容よりも、在宅勤務などの条件だけを重視している</span>
+            <span class="tg-ng-item">希望条件と求人市場に大きな乖離がある</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PAIN POINTS -->
+<section id="pain">
+  <div class="wrap">
+    <div class="pl">
+      <div class="fi">
+        <span class="lbl">Pain Points</span>
+        <h2>こんなお悩み、<br><span class="gt">ありませんか？</span></h2>
+        <p class="sub">広告運用職へのキャリアチェンジを目指す多くの方が、同じ壁にぶつかっています。</p>
+        <a href="#form" class="btn btn-p" style="margin-top:32px">まずは無料相談　→</a>
+      </div>
+      <div class="pr">
+        <div class="pc fi d1"><h3>今の仕事を続けても専門性が身につかない</h3><p>営業目標は追っているものの、この先も同じ仕事を続けることに不安がある。将来につながる専門スキルを身につけたい。</p></div>
+        <div class="pc fi d2"><h3>未経験歓迎求人を見極められない</h3><p>「未経験歓迎」と書かれた求人は見つかるが、本当に広告運用を担当できるのか、入社後にスキルが身につくのか判断できない。</p></div>
+        <div class="pc fi d3"><h3>自分の経験が活かせるか分からない</h3><p>営業やカスタマーサクセスなどの経験が、広告運用職でどのように評価されるのか分からない。</p></div>
+        <div class="pc fi d4"><h3>志望動機をうまく説明できない</h3><p>「マーケティングに興味がある」以上の志望動機を作れず、書類や面接で何を伝えればよいか分からない。</p></div>
+      </div>
+    </div>
+    <div class="pain-note fi d2">
+      <h3>未経験転職で重要なのは、<br>「未経験可」の求人を探すことではありません。</h3>
+      <p>自分の経験を評価してくれる企業と、入社後に広告運用のスキルを身につけられる求人を見極めることが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. WHY -->
+<section id="why">
+  <div class="orb w-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Why Akahai</span>
+      <h2>アカハイエージェントが<br><span class="gp">選ばれる3つの理由</span></h2>
+      <p class="sub" style="margin-top:14px">広告代理店を運営し、マーケティング実務を知っているからこそできる転職支援があります。</p>
+    </div>
+    <div class="wg">
+      <div class="wc fi d1"><div class="wn">01</div><h3>広告運用職の仕事を理解している</h3><p>広告運用は、広告を入稿するだけの仕事ではありません。顧客理解、戦略設計、データ分析、クリエイティブ改善、レポーティングなど、企業やポジションによって仕事内容が異なります。実際の業務内容を確認したうえで、広告運用のスキルを身につけられる求人をご紹介します。</p></div>
+      <div class="wc fi d2"><div class="wn">02</div><h3>これまでの経験を広告運用職向けに言語化</h3><p>営業実績や顧客対応経験をそのまま伝えるだけでは、広告運用職への適性が伝わらないことがあります。数値管理、課題発見、改善行動、顧客への提案などの経験を整理し、企業から評価される職務経歴書・自己PR・志望動機へ落とし込みます。</p></div>
+      <div class="wc fi d3"><div class="wn">03</div><h3>広告運用の先までキャリアを考える</h3><p>広告運用職への入社だけをゴールにしません。広告運用コンサルタント、アカウントプランナー、事業会社のWebマーケター、CRM、SNS、マーケティング責任者など、将来のキャリアから逆算して求人を提案します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FLOW -->
+<section id="flow">
+  <div class="orb f-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">How it Works</span>
+      <h2>ご利用の<span class="gt">流れ</span></h2>
+      <p class="sub" style="margin-top:14px">キャリア相談から入社まで、専任担当者が無料でサポートします。</p>
+    </div>
+    <div class="fs">
+      <div class="fc"></div>
+      <div class="fst fi d1"><div class="fd">1</div><h3>無料登録</h3><p>フォームから基本情報をご入力ください。</p></div>
+      <div class="fst fi d2"><div class="fd">2</div><h3>キャリア面談</h3><p>オンラインで、これまでの経験・転職理由・希望条件をお伺いします。</p></div>
+      <div class="fst fi d3"><div class="fd">3</div><h3>求人紹介</h3><p>ご経験や希望に合った求人をご紹介します。</p></div>
+      <div class="fst fi d4"><div class="fd">4</div><h3>書類添削・面接対策</h3><p>職務経歴書・自己PR・志望動機をブラッシュアップし、面接対策を行います。</p></div>
+      <div class="fst fi d5"><div class="fd">5</div><h3>内定・入社</h3><p>条件確認や入社日の調整までサポートします。</p></div>
+    </div>
+    <div class="fca fi"><a href="#form" class="btn btn-p">まずは無料相談　→</a></div>
+  </div>
+</section>
+
+<!-- 10. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="tc fi"><span class="lbl">FAQ</span><h2>よくある<span class="gt">質問</span></h2></div>
+    <div class="fi2">
+      <div class="fqi fi"><button class="fq">広告運用の経験がまったくなくても登録できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">はい。広告運用経験がない20代の方もご相談いただけます。ただし、これまでの社会人経験、学習状況、希望条件によって、ご紹介可能な求人は異なります。</div></div></div>
+      <div class="fqi fi d1"><button class="fq">マーケティングスクールに通っていなくても大丈夫ですか？<span class="fqic">+</span></button><div class="fa"><div class="fain">スクールの受講は必須ではありません。広告運用職の仕事内容を理解しているか、自分で学ぶ姿勢があるか、これまでの経験をどのように活かせるかが重要です。</div></div></div>
+      <div class="fqi fi d2"><button class="fq">営業経験は広告運用職で活かせますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">法人営業、無形商材営業、カスタマーサクセスなどの経験は、顧客理解、課題整理、改善提案、数値管理などの面で活かせます。特に、クライアント対応を伴う広告運用コンサルタントやアカウントプランナーでは、営業経験が評価されることがあります。</div></div></div>
+      <div class="fqi fi d3"><button class="fq">転職するか決めていなくても相談できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">はい。転職時期が決まっていない段階でもご相談いただけます。広告運用職の仕事内容や、現在の経験でどのような求人を目指せるかを知りたい方もご利用いただけます。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">広告運用以外の求人も紹介してもらえますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">ご経験や適性に応じて、アカウントプランナー、広告営業、SNSマーケティング、SEO、CRM、Webマーケティングなどの求人もご提案します。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">必ず求人を紹介してもらえますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">求人状況、ご経験、希望条件によっては、すぐに求人をご紹介できない場合があります。その場合も、広告運用職を目指すために必要な経験や学習内容についてお伝えします。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">サービスの利用料金はかかりますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">求職者の方は、登録、キャリア面談、求人紹介、書類添削、面接対策を無料で利用できます。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FINAL CTA -->
+<section id="cta">
+  <div class="orb cta-o1"></div><div class="orb cta-o2"></div>
+  <div class="ctain fi">
+    <span class="lbl" style="justify-content:center">Contact</span>
+    <h2>まずは、広告運用職への<br><span class="gt">転職可能性を相談してみる。</span></h2>
+    <p class="sub">広告運用職に向いているのか。どの経験をアピールすればよいのか。どのような企業を選べばよいのか。これまでの経験と希望をお聞きし、一緒に考えます。</p>
+    <a href="#form" class="btn btn-p btn-lg">広告運用職への転職を無料相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="cbadges">
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>求職者の利用料金0円</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>オンライン面談</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>転職時期未定でも相談可能</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>無理に転職を勧めることはありません</span>
+    </div>
+  </div>
+</section>
+
+<!-- 12. REGISTRATION FORM -->
+<section id="form">
+  <div class="form-inner">
+    <div class="tc fi">
+      <span class="lbl">Free Consultation</span>
+      <h2>無料キャリア相談を<span class="gt">申し込む</span></h2>
+      <p class="sub" style="margin-top:14px">フォームにご入力いただくと、担当者よりご連絡いたします。</p>
+    </div>
+    <div class="form-box fi d1">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>氏名<span class="req">必須</span></label>
+            <input type="text" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label>年齢<span class="req">必須</span></label>
+            <select required>
+              <option value="">選択してください</option>
+              <option>20歳</option><option>21歳</option><option>22歳</option><option>23歳</option>
+              <option>24歳</option><option>25歳</option><option>26歳</option><option>27歳</option>
+              <option>28歳</option><option>29歳</option><option>30歳以上</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>メールアドレス<span class="req">必須</span></label>
+            <input type="email" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>電話番号<span class="req">必須</span></label>
+            <input type="tel" placeholder="090-0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>現在の職種<span class="req">必須</span></label>
+            <select required>
+              <option value="">選択してください</option>
+              <option>法人営業</option><option>個人営業</option><option>カスタマーサクセス</option>
+              <option>マーケティング</option><option>企画・事業開発</option><option>エンジニア</option><option>その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>転職希望時期<span class="req">必須</span></label>
+            <select required>
+              <option value="">選択してください</option>
+              <option>1ヶ月以内</option><option>3ヶ月以内</option><option>6ヶ月以内</option><option>時期は未定</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>現在の就業状況<span class="opt">任意</span></label>
+            <select><option value="">選択してください</option><option>在職中</option><option>離職中</option></select>
+          </div>
+          <div class="form-group">
+            <label>転職回数<span class="opt">任意</span></label>
+            <select><option value="">選択してください</option><option>0回（新卒入社のみ）</option><option>1回</option><option>2回</option><option>3回以上</option></select>
+          </div>
+          <div class="form-group">
+            <label>広告・マーケティング実務経験<span class="opt">任意</span></label>
+            <select><option value="">選択してください</option><option>なし</option><option>1年未満</option><option>1〜3年</option><option>3年以上</option></select>
+          </div>
+          <div class="form-group">
+            <label>広告・マーケティングの学習状況<span class="opt">任意</span></label>
+            <select><option value="">選択してください</option><option>学習していない</option><option>独学中（書籍・動画など）</option><option>スクール受講中</option><option>資格取得済み</option></select>
+          </div>
+          <div class="form-group full">
+            <label>ご相談内容・気になること<span class="opt">任意</span></label>
+            <textarea placeholder="現在の状況や、転職について気になっていることをご自由にお書きください。"></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-p btn-lg">広告運用職への転職を無料相談する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+        <p class="form-note">ご入力いただいた情報は、キャリア相談のご連絡にのみ使用します。<br>無理に転職を勧めることはありません。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi3">
+    <div><img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:28px;display:block"></div>
+    <p>デジタルマーケティング職専門転職エージェント</p>
+    <p>© 2024 アカハイエージェント All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.fq').forEach(b=>{b.addEventListener('click',()=>{const o=b.classList.contains('open');document.querySelectorAll('.fq').forEach(x=>{x.classList.remove('open');x.nextElementSibling.style.maxHeight=null});if(!o){b.classList.add('open');const a=b.nextElementSibling;a.style.maxHeight=a.scrollHeight+'px'}})});
+const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')}),{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
