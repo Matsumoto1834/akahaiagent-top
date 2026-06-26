@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アカハイエージェント | マーケティング戦略設計 フリーランス募集</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TPGHB3RL');</script>
+<!-- End Google Tag Manager -->
+<link rel="icon" href="akahaiagent_favicon.png" type="image/png">
+<link rel="shortcut icon" href="akahaiagent_favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FFFFFF;--surface:#F5F5F8;
+  --card:rgba(0,0,0,0.03);--card-h:rgba(0,0,0,0.06);
+  --b:rgba(0,0,0,0.08);--bb:rgba(0,0,0,0.15);
+  --r:#E94560;--o:#FF6B35;--p:#7C3AED;
+  --t:#111118;--m:#666680;--m2:#999AB0;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.gt{background:linear-gradient(135deg,var(--r) 0%,var(--o) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gp{background:linear-gradient(135deg,var(--r) 0%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.logo{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.08em}.logo span{color:var(--r)}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
+.btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s,box-shadow .2s}.btn-n:hover{opacity:.85;box-shadow:0 0 32px rgba(233,69,96,.5)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.97rem;padding:15px 32px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:all .25s}
+.btn-p{background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 4px 24px rgba(233,69,96,.35)}.btn-p:hover{box-shadow:0 6px 36px rgba(233,69,96,.55);transform:translateY(-2px)}
+.btn-g{background:rgba(255,255,255,.05);color:var(--t);border:1px solid var(--bb);backdrop-filter:blur(8px)}.btn-g:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.25)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;flex-shrink:0}
+.btn-lg{padding:17px 42px;font-size:1.02rem;border-radius:10px}
+section{padding:110px 48px;position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.lbl{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--r);margin-bottom:16px}.lbl::before{content:'';width:16px;height:1px;background:var(--r)}
+h2{font-size:2.2rem;font-weight:900;line-height:1.25;margin-bottom:16px}
+.sub{color:var(--m);font-size:.95rem;line-height:1.9;max-width:580px}
+.tc{text-align:center}.tc .sub{margin:0 auto}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+
+/* HERO */
+#hero{display:flex;align-items:center;padding:120px 48px 80px;background:var(--bg);overflow:hidden}
+.h-o1{width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.18),transparent 70%);top:-100px;right:-100px}
+.h-o2{width:400px;height:400px;background:radial-gradient(circle,rgba(155,89,255,.12),transparent 70%);bottom:-50px;left:-80px}
+.hi{display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:center;position:relative;z-index:1}
+.hbadge{display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--r);margin-bottom:28px;border-bottom:2px solid var(--r);padding-bottom:4px}
+.hdot{display:none}
+h1.hh{font-family:'Inter',sans-serif;font-size:3.5rem;font-weight:900;line-height:1.12;margin-bottom:24px;letter-spacing:-.02em}
+.hdesc{color:var(--m);font-size:1rem;line-height:1.9;margin-bottom:32px;max-width:520px}
+.hreq{margin-bottom:32px}
+.hreq-label{font-size:.75rem;font-weight:700;color:var(--t);margin-bottom:10px;letter-spacing:.05em}
+.hreq-list{display:flex;flex-direction:column;gap:6px}
+.hreq-item{font-size:.84rem;color:var(--m);display:flex;align-items:flex-start;gap:8px;padding-left:14px;border-left:2px solid var(--r)}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.hnote{font-size:.72rem;color:var(--m2);line-height:1.8}
+.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.6),rgba(255,107,53,.6),transparent)}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.sc{background:var(--surface);border:1px solid var(--b);border-radius:12px;padding:18px 16px}
+.sn{font-family:'Inter',sans-serif;font-size:2.6rem;font-weight:900;line-height:1;margin-bottom:4px}
+.sl{font-size:.72rem;color:var(--m)}
+.nr{color:var(--r)}.no{color:var(--o)}.np{color:var(--p)}.nb{color:#5BA8FF}
+.snote{font-size:.68rem;color:var(--m2);text-align:center}
+
+/* LOGOS */
+#logos{background:var(--surface);padding:52px 48px}
+.logos-wrap{max-width:1180px;margin:0 auto}
+.logos-row{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.logo-item{display:flex;align-items:center;justify-content:center;height:48px;padding:0 8px}.logo-item img{height:100%;width:auto;max-width:120px;object-fit:contain;opacity:1}
+
+/* CASES */
+#cases{background:var(--bg)}
+.c-o{width:500px;height:500px;background:radial-gradient(circle,rgba(233,69,96,.07),transparent 70%);top:50%;right:-150px;transform:translateY(-50%)}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.cc{background:#fff;border:1px solid var(--b);border-radius:16px;padding:28px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.05)}
+.cc::after{content:'';position:absolute;inset:0;border-radius:16px;opacity:0;background:linear-gradient(135deg,rgba(233,69,96,.06),rgba(255,107,53,.03));transition:opacity .3s}
+.cc:hover{border-color:rgba(233,69,96,.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}.cc:hover::after{opacity:1}
+.ct{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:8px;flex-wrap:wrap}
+.cb{font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.05em}
+.cb-a{background:rgba(233,69,96,.12);color:var(--r)}.cb-p{background:rgba(255,107,53,.12);color:var(--o)}.cb-c{background:rgba(91,168,255,.12);color:#5BA8FF}.cb-g{background:rgba(124,58,237,.12);color:var(--p)}
+.cmeet{font-size:.75rem;font-weight:700;color:var(--m2)}
+.ctitle{font-size:.92rem;font-weight:700;margin-bottom:10px;line-height:1.5}
+.cdesc{font-size:.82rem;color:var(--m);line-height:1.75;margin-bottom:16px}
+.ctags{display:flex;gap:6px;flex-wrap:wrap}
+.ctag2{font-size:.68rem;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid var(--b);color:var(--m);font-weight:500}
+.cf{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:44px}
+.cn{font-size:.78rem;color:var(--m2)}
+
+/* SKILLS */
+#skills{background:var(--surface);padding:80px 48px}
+.sk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:36px}
+.sk-tag{background:#fff;border:1px solid var(--b);border-radius:12px;padding:18px 12px;text-align:center;font-size:.84rem;font-weight:600;color:var(--t);line-height:1.4;transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;min-height:72px}
+.sk-tag:hover{border-color:rgba(233,69,96,.3);box-shadow:0 4px 16px rgba(233,69,96,.08)}
+.sk-note{margin-top:28px;text-align:center;font-size:.82rem;color:var(--m);line-height:2}
+
+/* TARGET */
+#target{background:var(--bg);padding-bottom:40px}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.tg-left .sub{margin-top:16px}
+.tg-list{display:flex;flex-direction:column}
+.tg-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--b)}
+.tg-item:first-child{border-top:1px solid var(--b)}
+.tg-check{display:none}
+.tg-text h4{font-size:.92rem;font-weight:700;margin-bottom:4px;padding-left:14px;border-left:2px solid var(--r)}
+.tg-text p{font-size:.8rem;color:var(--m);line-height:1.7;padding-left:14px}
+.tg-ng{margin-top:20px;padding:16px 20px;border-radius:12px;background:rgba(0,0,0,.02);border:1px solid var(--b)}
+.tg-ng-label{font-size:.72rem;font-weight:700;color:var(--m2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.tg-ng-list{display:flex;flex-direction:column;gap:6px}
+.tg-ng-item{font-size:.82rem;color:var(--m);display:flex;align-items:flex-start;gap:8px;line-height:1.6}
+.tg-ng-item::before{content:'×';color:var(--m2);font-weight:700;font-size:.9rem;flex-shrink:0}
+.tg-ng-note{font-size:.8rem;color:var(--m);margin-top:14px;line-height:1.8;padding-top:12px;border-top:1px solid var(--b)}
+
+/* PAIN */
+#pain{background:var(--surface)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+.pr{display:flex;flex-direction:column}
+.pc{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--b)}
+.pc:first-child{border-top:1px solid var(--b)}
+.pi{display:none}
+.pb h3{font-size:.92rem;font-weight:700;margin-bottom:6px;padding-left:14px;border-left:2px solid var(--r)}
+.pb p{font-size:.82rem;color:var(--m);line-height:1.75;padding-left:14px}
+
+/* WHY */
+#why{background:var(--bg)}
+.w-o{width:600px;height:600px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);top:0;left:-200px}
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.wg-wide{grid-template-columns:repeat(3,1fr)}
+.wc{background:#fff;border:1px solid var(--b);border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 2px 16px rgba(0,0,0,0.05)}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:opacity .3s}
+.wc:hover{border-color:rgba(155,89,255,.25);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.08)}.wc:hover::before{opacity:1}
+.wn{font-family:'Inter',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;margin-bottom:18px;color:rgba(0,0,0,.06)}
+.wc h3{font-size:1rem;font-weight:700;margin-bottom:12px;line-height:1.4}
+.wc p{font-size:.84rem;color:var(--m);line-height:1.85}
+.why-row2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:20px}
+
+/* FLOW */
+#flow{background:var(--surface)}
+.f-o{width:400px;height:400px;background:radial-gradient(circle,rgba(233,69,96,.08),transparent 70%);bottom:-100px;right:-50px}
+.fs{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:56px;position:relative}
+.fc{position:absolute;top:28px;left:calc(8.33% + 28px);right:calc(8.33% + 28px);height:1px;background:linear-gradient(90deg,var(--r),var(--o),var(--p));opacity:.2}
+.fst{text-align:center;padding:0 8px;position:relative;z-index:1}
+.fd{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 24px rgba(233,69,96,.4);position:relative}
+.fd::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(233,69,96,.25)}
+.fst h3{font-size:.82rem;font-weight:700;margin-bottom:8px}
+.fst p{font-size:.74rem;color:var(--m);line-height:1.7}
+.fca{text-align:center;margin-top:52px;position:relative;z-index:1}
+
+/* FAQ */
+#faq{background:var(--bg)}
+.fi2{max-width:760px;margin:52px auto 0}
+.fqi{border-bottom:1px solid var(--b)}
+.fq{width:100%;background:none;border:none;color:var(--t);font-family:'Noto Sans JP',sans-serif;font-size:.95rem;font-weight:700;padding:22px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:16px}
+.fqic{width:30px;height:30px;border-radius:50%;flex-shrink:0;border:1px solid var(--bb);display:flex;align-items:center;justify-content:center;color:var(--r);font-size:1.3rem;line-height:1;transition:transform .35s,background .2s,border-color .2s}
+.fq.open .fqic{transform:rotate(45deg);background:rgba(233,69,96,.1);border-color:rgba(233,69,96,.3)}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.fain{padding:0 0 22px;font-size:.88rem;color:var(--m);line-height:1.9}
+
+/* CTA */
+#cta{padding:130px 48px;background:var(--bg);position:relative;overflow:hidden}
+.cta-o1{width:700px;height:700px;background:radial-gradient(circle,rgba(233,69,96,.12),transparent 70%);top:-200px;right:-200px}
+.cta-o2{width:500px;height:500px;background:radial-gradient(circle,rgba(155,89,255,.1),transparent 70%);bottom:-200px;left:-100px}
+.ctain{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ctain h2{font-size:2.5rem;font-weight:900;line-height:1.2;margin-bottom:20px}
+.ctain .sub{margin:0 auto 44px;font-size:1rem;max-width:600px}
+.cbadges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cbadge{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
+.cbadge svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5}
+
+footer{background:var(--surface);border-top:1px solid var(--b);padding:40px 48px}
+.fi3{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.flogo{font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em}.flogo span{color:var(--r)}
+footer p{font-size:.76rem;color:var(--m2)}
+
+.fi{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.fi.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+@media(max-width:960px){
+  nav{padding:0 24px}.nav-r .nl{display:none}
+  section{padding:80px 24px}#logos{padding:40px 24px}#skills{padding:60px 24px}
+  .hi{grid-template-columns:1fr}.hcard{display:none}
+  h1.hh{font-size:2.3rem}
+  .cg,.pl,.tg,.wg,.why-row2{grid-template-columns:1fr}
+  .sk-grid{grid-template-columns:repeat(3,1fr)}
+  .fs{grid-template-columns:repeat(3,1fr);gap:28px}.fc{display:none}
+  .ctain h2{font-size:2rem}.fi3{flex-direction:column;text-align:center}
+  .logos-row{gap:24px}
+}
+@media(max-width:600px){h1.hh{font-size:2rem}h2{font-size:1.75rem}.hctas{flex-direction:column}.btn-lg{padding:15px 28px}.sk-grid{grid-template-columns:repeat(2,1fr)}.fs{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPGHB3RL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <div class="logo"><img src="akahaiagent_logo.png" alt="akahai agent" style="height:60px;display:block"></div>
+  <div class="nav-r">
+    <a href="#cases" class="nl">案件を見る</a>
+    <a href="#why" class="nl">選ばれる理由</a>
+    <a href="#faq" class="nl">FAQ</a>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn-n" target="_blank">マーケティング戦略案件に登録する</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="orb h-o1"></div><div class="orb h-o2"></div>
+  <div class="wrap">
+    <div class="hi">
+      <div>
+        <div class="hbadge fi"><span class="hdot"></span>マーケティング戦略設計の実務経験者専門</div>
+        <h1 class="hh fi d1">施策を回すだけではない。<br><span class="gt">事業を動かす「勝ち筋」</span>を<br>設計する仕事へ。</h1>
+        <p class="hdesc fi d2">市場・競合・顧客の分析から、マーケティング戦略、KPI、チャネル設計、実行ロードマップまで。企業のマーケティング課題を整理し、事業成長につながる戦略を設計できるフリーランス人材を募集しています。</p>
+        <div class="hreq fi d2">
+          <div class="hreq-label">マーケティング戦略設計の実務経験者限定</div>
+          <div class="hreq-list">
+            <span class="hreq-item">マーケティング戦略の策定経験がある方</span>
+            <span class="hreq-item">クライアントや経営層への提案経験がある方</span>
+            <span class="hreq-item">戦略資料・提案資料を提出できる方</span>
+            <span class="hreq-item">業務委託として自律的にプロジェクトを推進できる方</span>
+          </div>
+        </div>
+        <div class="hctas fi d3">
+          <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p btn-lg" target="_blank">マーケティング戦略案件に登録する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <p class="hnote fi d3">※広告運用、SNS運用、SEO施策など、一領域の実行経験だけではご紹介が難しい場合があります。</p>
+      </div>
+      <div class="hcard fi d2">
+        <div class="sg">
+          <div class="sc"><div class="sn nr">4,500</div><div class="sl">平均時間単価（円）</div></div>
+          <div class="sc"><div class="sn no">70</div><div class="sl">非公開案件率（%）</div></div>
+          <div class="sc"><div class="sn np">6,000</div><div class="sl">累計登録者数（名）</div></div>
+          <div class="sc"><div class="sn nb">8</div><div class="sl">平均経験年数（年）</div></div>
+        </div>
+        <p class="snote">※サービス全体の実績数値です</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="logos">
+  <div class="logos-wrap">
+    <div class="tc fi">
+      <span class="lbl">Clients</span>
+      <h2>取引実績企業<span class="gt">（一部）</span></h2>
+    </div>
+    <div class="logos-row fi d1" style="margin-top:48px">
+      <span class="logo-item"><img src="Company_logo_tr/CA.png" alt="CyberAgent"></span>
+      <span class="logo-item"><img src="Company_logo_tr/DDlogo_black.png" alt="dentsu digital"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Hakuhodo_DY_One_logo.png" alt="Hakuhodo DY One"></span>
+      <span class="logo-item"><img src="Company_logo_tr/Speee.png" alt="Speee"></span>
+      <span class="logo-item"><img src="Company_logo_tr/AIDEM.png" alt="AIDEM"></span>
+      <span class="logo-item"><img src="Company_logo_tr/アナグラム.png" alt="アナグラム"></span>
+      <span class="logo-item"><img src="Company_logo_tr/オーリーズ.png" alt="オーリーズ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/グラッドキューブ.png" alt="グラッドキューブ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/デジタリフト_横.png" alt="デジタリフト"></span>
+      <span class="logo-item"><img src="Company_logo_tr/インタースペース.png" alt="インタースペース"></span>
+      <span class="logo-item"><img src="Company_logo_tr/フルスピード.png" alt="フルスピード"></span>
+      <span class="logo-item"><img src="Company_logo_tr/カオナビ.png" alt="カオナビ"></span>
+      <span class="logo-item"><img src="Company_logo_tr/あつまる.png" alt="あつまる"></span>
+      <span class="logo-item"><img src="Company_logo_tr/イングリウッド.png" alt="イングリウッド"></span>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="orb c-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Cases</span>
+      <h2>ご紹介する<span class="gt">案件例</span></h2>
+      <p class="sub" style="margin-top:14px">マーケティング戦略設計の実務経験者を対象とした案件をご紹介しています。</p>
+    </div>
+    <div class="cg">
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-a">新規事業</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">新規事業のマーケティング戦略設計</div>
+        <p class="cdesc">新規サービスの市場分析、ターゲット設定、ポジショニング、GTM戦略、KPI、集客施策を設計します。</p>
+        <div class="ctags"><span class="ctag2">市場分析</span><span class="ctag2">GTM戦略</span><span class="ctag2">KPI設計</span><span class="ctag2">週2日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-p">BtoB</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">BtoB企業のリード獲得戦略</div>
+        <p class="cdesc">商談・受注から逆算し、ターゲット企業、リード獲得方法、コンテンツ、広告、インサイドセールスとの連携を設計します。</p>
+        <div class="ctags"><span class="ctag2">リード獲得</span><span class="ctag2">ファネル設計</span><span class="ctag2">週2日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-c">EC・D2C</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">EC・D2C事業の成長戦略</div>
+        <p class="cdesc">新規顧客獲得、リピート、LTV向上を横断し、広告、CRM、SNS、コンテンツなどの役割を整理します。</p>
+        <div class="ctags"><span class="ctag2">LTV向上</span><span class="ctag2">CRM設計</span><span class="ctag2">週3日〜</span><span class="ctag2">フルリモート</span></div>
+      </div>
+      <div class="cc fi d1">
+        <div class="ct"><span class="cb cb-a">店舗</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">店舗ビジネスの集客戦略</div>
+        <p class="cdesc">商圏、顧客属性、店舗別実績を分析し、認知から予約・来店までの集客戦略を設計します。</p>
+        <div class="ctags"><span class="ctag2">商圏分析</span><span class="ctag2">来店促進</span><span class="ctag2">週2日〜</span><span class="ctag2">一部出社</span></div>
+      </div>
+      <div class="cc fi d2">
+        <div class="ct"><span class="cb cb-g">ブランド</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">ブランド・コミュニケーション戦略</div>
+        <p class="cdesc">顧客インサイトや競合環境を踏まえ、ブランドの提供価値、メッセージ、クリエイティブ方針を策定します。</p>
+        <div class="ctags"><span class="ctag2">ブランド戦略</span><span class="ctag2">訴求設計</span><span class="ctag2">週2日〜</span><span class="ctag2">リモート可</span></div>
+      </div>
+      <div class="cc fi d3">
+        <div class="ct"><span class="cb cb-p">組織設計</span><span class="cmeet">要面談</span></div>
+        <div class="ctitle">マーケティング組織の立ち上げ・改善</div>
+        <p class="cdesc">マーケティング組織の役割、業務プロセス、KPI、会議体、外部パートナーとの連携体制を設計します。</p>
+        <div class="ctags"><span class="ctag2">組織設計</span><span class="ctag2">KPI設計</span><span class="ctag2">週3日〜</span><span class="ctag2">一部出社</span></div>
+      </div>
+    </div>
+    <div class="cf fi">
+      <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" target="_blank">まずは無料相談　→</a>
+      <p class="cn">※ 掲載は一部です。非公開案件を含む全案件は面談後にご紹介します</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="tc fi">
+      <span class="lbl">Tasks</span>
+      <h2>お任せする<span class="gt">主な業務</span></h2>
+      <p class="sub" style="margin-top:14px">案件によって担当範囲は異なります。経験と希望を踏まえてご提案します。</p>
+    </div>
+    <div class="sk-grid fi d1">
+      <div class="sk-tag">経営者・事業責任者<br>へのヒアリング</div>
+      <div class="sk-tag">事業課題・<br>マーケティング課題の整理</div>
+      <div class="sk-tag">市場・競合・<br>顧客・商材の分析</div>
+      <div class="sk-tag">既存施策・<br>データの分析</div>
+      <div class="sk-tag">ターゲット・<br>ペルソナ・ICPの設計</div>
+      <div class="sk-tag">カスタマー<br>ジャーニーの設計</div>
+      <div class="sk-tag">ポジショニング・<br>提供価値・訴求軸の策定</div>
+      <div class="sk-tag">マーケティング<br>戦略の立案</div>
+      <div class="sk-tag">コミュニケーション<br>戦略の立案</div>
+      <div class="sk-tag">集客・育成・購買・<br>継続のファネル設計</div>
+      <div class="sk-tag">KGI・KPI・<br>KPIツリーの設計</div>
+      <div class="sk-tag">チャネルごとの<br>役割と予算配分の設計</div>
+      <div class="sk-tag">施策ロード<br>マップの作成</div>
+      <div class="sk-tag">経営層・クライアント向け<br>提案資料の作成</div>
+      <div class="sk-tag">定例会議の進行・<br>関係者との合意形成</div>
+      <div class="sk-tag">実行施策の<br>ディレクション</div>
+      <div class="sk-tag">効果検証と<br>戦略・施策の改善</div>
+    </div>
+    <p class="sk-note fi d2">案件によって業務内容・単価・稼働条件は異なります。<br>これまでの担当範囲や実績を面談時にお聞かせください。経験に合った案件をご紹介します。</p>
+  </div>
+</section>
+
+<section id="target">
+  <div class="wrap">
+    <div class="tg">
+      <div class="tg-left fi">
+        <span class="lbl">Requirements</span>
+        <h2>必須となる<span class="gt">経験</span></h2>
+        <p class="sub">以下のすべて、またはそれに準ずる経験をお持ちの方を対象としています。</p>
+        <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" style="margin-top:32px" target="_blank">まずは無料相談　→</a>
+        <div style="margin-top:36px">
+          <p style="font-size:.84rem;font-weight:700;color:var(--t);margin-bottom:6px">応募時にご提出いただくもの</p>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px">
+            <span style="font-size:.82rem;color:var(--m);padding-left:14px;border-left:2px solid var(--b)">職務経歴書</span>
+            <span style="font-size:.82rem;color:var(--m);padding-left:14px;border-left:2px solid var(--b)">過去に担当したプロジェクトの概要</span>
+            <span style="font-size:.82rem;color:var(--m);padding-left:14px;border-left:2px solid var(--b)">ご自身が担当した戦略設計の範囲</span>
+            <span style="font-size:.82rem;color:var(--m);padding-left:14px;border-left:2px solid var(--b)">戦略資料、企画書、提案書などの実績資料</span>
+          </div>
+          <p style="font-size:.76rem;color:var(--m2);margin-top:12px;line-height:1.8">※機密情報は削除・匿名化した状態で問題ありません。<br>※実績資料を提出できない場合は、面談時にプロジェクトの進め方を詳しく確認します。</p>
+        </div>
+      </div>
+      <div class="fi d1">
+        <div class="tg-list">
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>マーケティング領域における実務経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>マーケティング戦略またはコミュニケーション戦略の策定経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>市場・競合・顧客分析を基に戦略を設計した経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>KGI・KPI・施策ロードマップを設計した経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>クライアント、経営層または事業責任者への提案経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>戦略資料、企画書、提案書を作成した経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>複数の関係者を巻き込んでプロジェクトを推進した経験</h4></div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-check"></div>
+            <div class="tg-text"><h4>業務委託として主体的に業務を遂行できること</h4></div>
+          </div>
+        </div>
+        <div class="tg-ng" style="margin-top:28px">
+          <div class="tg-ng-label">以下の経験だけでは対象になりません</div>
+          <div class="tg-ng-list">
+            <span class="tg-ng-item">広告管理画面の入稿・調整のみ</span>
+            <span class="tg-ng-item">指示された広告施策の運用のみ</span>
+            <span class="tg-ng-item">SNSの投稿作成・投稿代行のみ</span>
+            <span class="tg-ng-item">SEO記事の制作・ディレクションのみ</span>
+            <span class="tg-ng-item">レポートの集計・更新のみ</span>
+            <span class="tg-ng-item">上位者が設計した戦略の実行のみ</span>
+            <span class="tg-ng-item">スクールや講座で戦略設計を学んだだけ</span>
+            <span class="tg-ng-item">第三者への提案経験がない</span>
+            <span class="tg-ng-item">実績や担当範囲を具体的に説明できない</span>
+          </div>
+          <p class="tg-ng-note">広告運用やSEO、SNSなどの専門経験を否定するものではありません。ただし、今回の案件では、その専門性を基に上流の戦略を設計した経験が必要です。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pain">
+  <div class="wrap">
+    <div class="pl">
+      <div class="fi">
+        <span class="lbl">Experience Check</span>
+        <h2>このような経験を<br><span class="gt">お持ちではありませんか？</span></h2>
+        <p class="sub">ひとつでも当てはまる方は、これまでの経験を活かせる案件をご紹介できる可能性があります。</p>
+        <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" style="margin-top:32px" target="_blank">まずは無料相談　→</a>
+      </div>
+      <div class="pr">
+        <div class="pc fi d1"><div class="pi"></div><div class="pb"><h3>施策を実行する前に、市場や顧客の分析を行ってきた</h3></div></div>
+        <div class="pc fi d2"><div class="pi"></div><div class="pb"><h3>事業目標からマーケティング目標を設計したことがある</h3></div></div>
+        <div class="pc fi d3"><div class="pi"></div><div class="pb"><h3>クライアントの課題を整理し、戦略として言語化してきた</h3></div></div>
+        <div class="pc fi d4"><div class="pi"></div><div class="pb"><h3>KPIツリーやマーケティングファネルを設計したことがある</h3></div></div>
+        <div class="pc fi d1"><div class="pi"></div><div class="pb"><h3>複数のマーケティング施策を横断して企画したことがある</h3></div></div>
+        <div class="pc fi d2"><div class="pi"></div><div class="pb"><h3>経営層や事業責任者に対する提案・報告を担当してきた</h3></div></div>
+        <div class="pc fi d3"><div class="pi"></div><div class="pb"><h3>戦略を資料にまとめ、社内外の関係者を動かしてきた</h3></div></div>
+        <div class="pc fi d4"><div class="pi"></div><div class="pb"><h3>戦略策定後の施策推進や効果検証まで担当してきた</h3></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="orb w-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">Why Akahai</span>
+      <h2>選ばれる<span class="gp">5つの理由</span></h2>
+      <p class="sub" style="margin-top:14px">マーケティング領域を深く理解しているからこそ、経験と案件を正しくマッチングできます。</p>
+    </div>
+    <div class="wg">
+      <div class="wc fi d1"><div class="wn">01</div><h3>マーケティング領域に特化</h3><p>マーケティング職やマーケティング業務を理解した担当者が、経験・スキル・希望に合った案件をご提案します。</p></div>
+      <div class="wc fi d2"><div class="wn">02</div><h3>表面的なスキルだけで判断しない</h3><p>経験年数や使用ツールだけではなく、どのような課題に対して、何を分析し、どのような戦略を設計したのかを確認します。</p></div>
+      <div class="wc fi d3"><div class="wn">03</div><h3>上流工程の案件を紹介</h3><p>施策の実行代行だけではなく、事業課題の整理、戦略立案、KPI設計、プロジェクト推進など、上流から関われる案件をご紹介します。</p></div>
+    </div>
+    <div class="why-row2">
+      <div class="wc fi d1"><div class="wn">04</div><h3>マーケターが案件内容を確認</h3><p>企業から提示された業務内容をそのまま掲載するのではなく、役割、期待成果、担当範囲、必要スキルを整理したうえでご案内します。</p></div>
+      <div class="wc fi d2"><div class="wn">05</div><h3>キャリアを踏まえた案件提案</h3><p>現在のスキルだけでなく、今後どのような専門性やポジションを目指すのかを踏まえて案件をご提案します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="orb f-o"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="tc fi">
+      <span class="lbl">How it Works</span>
+      <h2>案件参画までの<span class="gt">流れ</span></h2>
+      <p class="sub" style="margin-top:14px">実務経験と希望条件を確認し、専門性に合ったマーケティング戦略案件をご紹介します。</p>
+    </div>
+    <div class="fs">
+      <div class="fc"></div>
+      <div class="fst fi d1"><div class="fd">1</div><h3>登録</h3><p>フォームから、職務経歴、得意領域、希望条件などをご登録ください。</p></div>
+      <div class="fst fi d2"><div class="fd">2</div><h3>実績・スキル確認</h3><p>これまで担当したプロジェクト、戦略設計の範囲、成果、実績資料を確認します。</p></div>
+      <div class="fst fi d3"><div class="fd">3</div><h3>キャリア面談</h3><p>マーケティング領域を理解した担当者が、経験や希望する案件についてヒアリングします。</p></div>
+      <div class="fst fi d4"><div class="fd">4</div><h3>案件紹介</h3><p>経験・スキル・稼働条件に合った案件がある場合に、詳細をご案内します。</p></div>
+      <div class="fst fi d5"><div class="fd">5</div><h3>企業面談</h3><p>企業との面談を実施し、課題、役割、成果物、稼働方法などを確認します。</p></div>
+      <div class="fst fi d5"><div class="fd">6</div><h3>契約・案件参画</h3><p>条件合意後、業務委託契約を締結し、案件へ参画します。</p></div>
+    </div>
+    <div class="fca fi"><a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p" target="_blank">まずは無料相談　→</a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="tc fi"><span class="lbl">FAQ</span><h2>よくある<span class="gt">質問</span></h2></div>
+    <div class="fi2">
+      <div class="fqi fi"><button class="fq">広告運用の経験しかありませんが、登録できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">広告運用に加えて、事業課題の整理、ターゲット設計、コミュニケーション設計、KPI設計、予算配分などを担当した経験があれば、ご登録いただけます。媒体運用のみを担当してきた場合は、ご紹介できる案件が限られます。</div></div></div>
+      <div class="fqi fi d1"><button class="fq">戦略コンサルタントという肩書がなくても応募できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">肩書は問いません。広告代理店のストラテジックプランナー、アカウントプランナー、事業会社のマーケティング責任者、ブランドマネージャーなど、実務で戦略設計を担当していれば対象となります。</div></div></div>
+      <div class="fqi fi d2"><button class="fq">戦略資料を提出できません。<span class="fqic">+</span></button><div class="fa"><div class="fain">機密情報を削除・匿名化した資料をご提出ください。資料の提出が難しい場合は、担当案件の課題、分析内容、戦略、担当範囲、成果を面談で詳しく確認します。</div></div></div>
+      <div class="fqi fi d3"><button class="fq">一部の領域しか経験がありません。<span class="fqic">+</span></button><div class="fa"><div class="fain">すべてのマーケティング領域を経験している必要はありません。BtoB、EC、広告、CRM、ブランドなど、特定領域において戦略設計の経験があれば、その専門性を活かせる案件をご提案します。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">副業でも登録できますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">案件ごとに必要な稼働時間が異なります。現在の稼働状況や対応可能な曜日・時間をご登録ください。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">フルリモート案件はありますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">案件によって異なります。リモート、出社、リモートと出社の併用など、希望条件を面談時に確認します。</div></div></div>
+      <div class="fqi fi d4"><button class="fq">登録すれば必ず案件を紹介してもらえますか？<span class="fqic">+</span></button><div class="fa"><div class="fain">ご登録いただいた経験、スキル、稼働条件と案件の要件が合致した場合にご紹介します。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="orb cta-o1"></div><div class="orb cta-o2"></div>
+  <div class="ctain fi">
+    <span class="lbl" style="justify-content:center">Contact</span>
+    <h2><span class="gt">施策を実行するだけではなく、<br>企業のマーケティング戦略を設計する。</span></h2>
+    <p class="sub">企業の課題を整理し、市場・顧客を分析し、事業が成長するための道筋を描く。これまで培ってきたマーケティングの経験を、より上流の案件で活かしませんか。</p>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn btn-p btn-lg" target="_blank">マーケティング戦略案件に登録する<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="cbadges">
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>戦略策定経験</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>経営層・クライアントへの提案経験</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>KPI・ロードマップの設計経験</span>
+      <span class="cbadge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>実績資料の提出必須</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi3">
+    <div class="flogo"><img src="akahaiagent_logo.png" alt="akahai agent" style="height:28px;display:block"></div>
+    <p>マーケティング戦略設計特化のフリーランスマッチングサービス</p>
+    <p>© 2024 アカハイエージェント All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.fq').forEach(b=>{b.addEventListener('click',()=>{const o=b.classList.contains('open');document.querySelectorAll('.fq').forEach(x=>{x.classList.remove('open');x.nextElementSibling.style.maxHeight=null});if(!o){b.classList.add('open');const a=b.nextElementSibling;a.style.maxHeight=a.scrollHeight+'px'}})});
+const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')}),{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
