@@ -42,6 +42,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;ali
 .btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s}.btn-n:hover{opacity:.85}
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:8px}
 .ham span{display:block;width:22px;height:2px;background:var(--t);transition:all .3s;border-radius:2px}
+/* FIXED CTA */
+.fixed-cta{position:fixed;top:14px;right:20px;z-index:600;font-size:.82rem;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 2px 16px rgba(233,69,96,.4);transition:opacity .2s,box-shadow .2s;white-space:nowrap}.fixed-cta:hover{opacity:.88;box-shadow:0 4px 24px rgba(233,69,96,.55)}
 .mob-nav{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--b);padding:24px 24px 32px;z-index:499;flex-direction:column;gap:16px}
 .mob-nav.open{display:flex}
 .mob-nav .nl{font-size:.95rem;padding:4px 0}
@@ -220,19 +222,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+<a href="https://timerex.net/s/akahai_68a1/0826335e" class="fixed-cta" target="_blank" rel="noopener" aria-label="無料面談を申し込む（外部サイト）">無料で面談を申し込む</a>
 
 <!-- NAV -->
 <nav role="navigation" aria-label="メインナビゲーション">
   <a href="/" class="logo" aria-label="アカハイエージェント トップへ">
-    <img src="akahaiagent_logo.png" alt="アカハイエージェント" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-    <span class="logo-txt" style="display:none">AKAHAI<span>AGENT</span></span>
+    <img src="akahaiagent_logo.png" alt="アカハイエージェント">
   </a>
   <div class="nav-r">
     <a href="#services" class="nl">サービス一覧</a>
     <a href="#quiz" class="nl">サービス診断</a>
     <a href="#flow" class="nl">ご利用の流れ</a>
     <a href="#faq" class="nl">よくある質問</a>
-    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn-n" target="_blank" rel="noopener" aria-label="無料面談を申し込む（外部サイト）">無料で面談を申し込む</a>
   </div>
   <button class="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="mob-nav" id="ham-btn">
     <span></span><span></span><span></span>
@@ -245,7 +246,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#quiz" class="nl">サービス診断</a>
   <a href="#flow" class="nl">ご利用の流れ</a>
   <a href="#faq" class="nl">よくある質問</a>
-  <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn-n" target="_blank" rel="noopener" style="width:fit-content">無料で面談を申し込む</a>
 </div>
 
 <!-- HERO -->
