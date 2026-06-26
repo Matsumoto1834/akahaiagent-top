@@ -60,14 +60,8 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 .htrust{display:flex;gap:22px;flex-wrap:wrap}
 .ti{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
 .ti svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5;flex-shrink:0}
-.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
-.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.6),rgba(255,107,53,.6),transparent)}
-.hch{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--m);margin-bottom:20px}
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sc{background:var(--surface);border:1px solid var(--b);border-radius:12px;padding:18px 16px}
-.sn{font-family:'Inter',sans-serif;font-size:2.6rem;font-weight:900;line-height:1;margin-bottom:4px}
-.sl{font-size:.72rem;color:var(--m)}
-.nr{color:var(--r)}.no{color:var(--o)}.np{color:var(--p)}.nb{color:#5BA8FF}
+.himg{border-radius:20px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,0.14);line-height:0}
+.himg img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* LOGOS */
 #logos{background:var(--surface);padding:52px 48px}
@@ -205,7 +199,7 @@ footer p{font-size:.76rem;color:var(--m2)}
 @media(max-width:960px){
   nav{padding:0 24px}.nav-r .nl{display:none}
   section{padding:80px 24px}#logos{padding:40px 24px}#skills{padding:60px 24px}#form{padding:80px 24px}
-  .hi{grid-template-columns:1fr}.hcard{display:none}
+  .hi{grid-template-columns:1fr}.himg{display:none}
   h1.hh{font-size:2.3rem}
   .cg,.pl,.wg,.tg{grid-template-columns:1fr}
   .sk-grid{grid-template-columns:repeat(3,1fr)}
@@ -261,14 +255,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="ti"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>転職時期未定でも相談可能</span>
         </div>
       </div>
-      <div class="hcard fi d2">
-        <div class="hch">サービスの特徴</div>
-        <div class="sg">
-          <div class="sc"><div class="sn nr" style="font-size:1.1rem;font-weight:900;line-height:1.4">広告代理店<br>が運営</div><div class="sl">現場を知るエージェント</div></div>
-          <div class="sc"><div class="sn no" style="font-size:1.1rem;font-weight:900;line-height:1.4">マーケ職<br>に特化</div><div class="sl">デジタル領域の求人のみ</div></div>
-          <div class="sc"><div class="sn np" style="font-size:1.1rem;font-weight:900;line-height:1.4">書類・面接<br>対策まで</div><div class="sl">内定まで一貫サポート</div></div>
-          <div class="sc"><div class="sn nb" style="font-size:1.1rem;font-weight:900;line-height:1.4">利用料金<br>0円</div><div class="sl">求職者は完全無料</div></div>
-        </div>
+      <div class="himg fi d2">
+        <img src="hero.jpg" alt="キャリア面談のようす" loading="eager">
       </div>
     </div>
   </div>
