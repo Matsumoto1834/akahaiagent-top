@@ -35,7 +35,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--t)}
-.logo img{height:32px;width:auto}
+.logo-img{display:none}
 .logo-txt{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.08em;color:var(--t)}.logo-txt span{color:var(--r)}
 .nav-r{display:flex;align-items:center;gap:32px}
 .nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
@@ -227,7 +227,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <nav role="navigation" aria-label="メインナビゲーション">
   <a href="/" class="logo" aria-label="アカハイエージェント トップへ">
-    <img src="akahaiagent_logo.png" alt="アカハイエージェント">
+    <img src="akahaiagent_logo.png" alt="アカハイエージェント" class="logo-img">
+    <span class="logo-txt">AKAHAI<span>AGENT</span></span>
   </a>
   <div class="nav-r">
     <a href="#services" class="nl">サービス一覧</a>
