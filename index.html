@@ -157,11 +157,12 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 .finder-btn{display:flex;align-items:center;gap:14px;width:100%;background:none;border:2px solid var(--b);border-radius:12px;padding:16px 20px;font-family:'Noto Sans JP',sans-serif;font-size:.95rem;font-weight:600;color:var(--t);cursor:pointer;text-align:left;transition:all .2s}
 .finder-btn:hover{border-color:var(--r);background:rgba(233,69,96,.04)}
 .finder-btn:focus-visible{outline:2px solid var(--r);outline-offset:2px;border-radius:12px}
-.finder-btn .ficon{width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--b);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;transition:background .2s}
+.finder-btn .ficon{width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--b);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;color:var(--m)}
+.finder-btn .ficon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;flex-shrink:0}
 .finder-btn:hover .ficon{background:rgba(233,69,96,.1);border-color:rgba(233,69,96,.2)}
 .finder-result{display:none;text-align:center}
 .finder-result.active{display:block}
-.result-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(255,107,53,.08));border:1px solid rgba(233,69,96,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem}
+.result-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(233,69,96,.12),rgba(255,107,53,.08));border:1px solid rgba(233,69,96,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--r)}
 .result-title{font-size:1.1rem;font-weight:700;margin-bottom:8px}
 .result-note{font-size:.82rem;color:var(--m);margin:12px 0 24px;line-height:1.8;background:var(--surface);border-radius:10px;padding:12px 16px;text-align:left}
 .result-back{background:none;border:1px solid var(--b);border-radius:8px;padding:10px 20px;font-family:'Noto Sans JP',sans-serif;font-size:.85rem;color:var(--m);cursor:pointer;margin-top:12px;transition:border-color .2s}
@@ -383,13 +384,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="finder-question" id="step1-label">希望する働き方を選んでください</p>
         <div class="finder-options">
           <button class="finder-btn" data-next="step-2a" data-label="正社員として転職したい">
-            <span class="ficon" aria-hidden="true">🏢</span>正社員として転職したい
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v3M10.5 13.5h3"/></svg></span>正社員として転職したい
           </button>
           <button class="finder-btn" data-next="step-2b" data-label="フリーランスとして案件を探したい">
-            <span class="ficon" aria-hidden="true">💼</span>フリーランスとして案件を探したい
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>フリーランスとして案件を探したい
           </button>
           <button class="finder-btn" data-result="consultation" data-label="まだ決めていない">
-            <span class="ficon" aria-hidden="true">🤔</span>まだ決めていない
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></span>まだ決めていない
           </button>
         </div>
       </div>
@@ -399,13 +400,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="finder-question" id="step2a-label">現在のご経験に近いものを選んでください</p>
         <div class="finder-options">
           <button class="finder-btn" data-result="career" data-label="20代で、広告運用は未経験">
-            <span class="ficon" aria-hidden="true">🌱</span>20代で、広告運用は未経験
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12C12 7 7 4 3 5c0 4 3 7 9 7z"/><path d="M12 12c0-5 5-8 9-7-1 4-4 7-9 7"/></svg></span>20代で、広告運用は未経験
           </button>
           <button class="finder-btn" data-result="consultation" data-label="デジタルマーケティング経験がある">
-            <span class="ficon" aria-hidden="true">📈</span>デジタルマーケティング経験がある
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>デジタルマーケティング経験がある
           </button>
           <button class="finder-btn" data-result="consultation" data-label="どれに該当するか分からない（正社員）">
-            <span class="ficon" aria-hidden="true">❓</span>どれに該当するか分からない
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></span>どれに該当するか分からない
           </button>
         </div>
       </div>
@@ -415,16 +416,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="finder-question" id="step2b-label">最も近い専門領域を選んでください</p>
         <div class="finder-options">
           <button class="finder-btn" data-result="freelance" data-label="広告運用・SEO・CRM・SNS・マーケティング戦略">
-            <span class="ficon" aria-hidden="true">📊</span>広告運用・SEO・CRM・SNS・マーケティング戦略など
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>広告運用・SEO・CRM・SNS・マーケティング戦略など
           </button>
           <button class="finder-btn" data-result="accountPlanner" data-label="アカウントプランナー・広告営業・クライアントフロント">
-            <span class="ficon" aria-hidden="true">🤝</span>アカウントプランナー・広告営業・クライアントフロント
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>アカウントプランナー・広告営業・クライアントフロント
           </button>
           <button class="finder-btn" data-result="aio" data-label="AIO・LLMOの企業案件経験がある">
-            <span class="ficon" aria-hidden="true">🤖</span>AIO・LLMOの企業案件経験がある
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></span>AIO・LLMOの企業案件経験がある
           </button>
           <button class="finder-btn" data-result="consultation" data-label="どれに該当するか分からない（フリーランス）">
-            <span class="ficon" aria-hidden="true">❓</span>どれに該当するか分からない
+            <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></span>どれに該当するか分からない
           </button>
         </div>
       </div>
@@ -794,9 +795,17 @@ var LINKS = {
   consultation: 'https://timerex.net/s/akahai_68a1/0826335e/'
 };
 
+var ICON = {
+  career: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>',
+  freelance: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
+  accountPlanner: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  aio: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
+  consultation: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+};
+
 var RESULTS = {
   career: {
-    icon: '🏢',
+    icon: ICON.career,
     title: '20代・未経験から広告運用職へ',
     url: LINKS.career,
     ctaText: '転職支援サービスを見る',
@@ -804,7 +813,7 @@ var RESULTS = {
     type: 'career'
   },
   freelance: {
-    icon: '📊',
+    icon: ICON.freelance,
     title: 'デジタルマーケター向けフリーランス',
     url: LINKS.freelance,
     ctaText: 'フリーランス案件を見る',
@@ -812,7 +821,7 @@ var RESULTS = {
     type: 'freelance'
   },
   accountPlanner: {
-    icon: '🤝',
+    icon: ICON.accountPlanner,
     title: 'アカウントプランナー向けフリーランス',
     url: LINKS.accountPlanner,
     ctaText: 'AP向け案件を見る',
@@ -820,7 +829,7 @@ var RESULTS = {
     type: 'accountPlanner'
   },
   aio: {
-    icon: '🤖',
+    icon: ICON.aio,
     title: 'AIO・LLMO実務経験者向け',
     url: LINKS.aio,
     ctaText: 'AIO・LLMO案件を見る',
@@ -828,7 +837,7 @@ var RESULTS = {
     type: 'aio'
   },
   consultation: {
-    icon: '💬',
+    icon: ICON.consultation,
     title: '専任担当者に直接ご相談ください',
     url: LINKS.consultation,
     ctaText: '無料相談を申し込む',
@@ -933,7 +942,7 @@ function showResult(key){
   var r = RESULTS[key];
   if(!r) return;
   document.querySelectorAll('.finder-step').forEach(function(s){ s.classList.remove('active'); });
-  document.getElementById('result-icon').textContent = r.icon;
+  document.getElementById('result-icon').innerHTML = r.icon;
   document.getElementById('result-title').textContent = r.title;
   var noteEl = document.getElementById('result-note');
   if(r.note){
