@@ -273,17 +273,9 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* FOOTER */
-footer{background:var(--surface);border-top:1px solid var(--b);padding:52px 48px}
-.footer-in{max-width:1180px;margin:0 auto}
-.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--b)}
-.footer-brand p{font-size:.82rem;color:var(--m);margin-top:10px;max-width:280px;line-height:1.7}
-.footer-nav-row{display:flex;gap:60px;flex-wrap:wrap}
-.footer-nav-group h4{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--m2);margin-bottom:16px}
-.footer-nav-group ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-nav-group ul li a,.footer-nav-group ul li button{font-size:.84rem;color:var(--m);text-decoration:none;background:none;border:none;cursor:pointer;font-family:'Noto Sans JP',sans-serif;padding:0;transition:color .2s}
-.footer-nav-group ul li a:hover,.footer-nav-group ul li button:hover{color:var(--t)}
-.footer-nav-group ul li a:focus-visible,.footer-nav-group ul li button:focus-visible{outline:2px solid var(--r);outline-offset:2px;border-radius:3px}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer{background:var(--surface);border-top:1px solid var(--b);padding:40px 48px}
+.fi3{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.flogo{font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em}
 footer p{font-size:.76rem;color:var(--m2)}
 
 /* ANIMATIONS */
@@ -313,7 +305,7 @@ footer p{font-size:.76rem;color:var(--m2)}
   .ng{grid-template-columns:1fr 1fr}
   .fs{grid-template-columns:1fr;gap:28px}.fc{display:none}
   .ctain h2{font-size:2rem}
-  .footer-top{flex-direction:column}
+  .fi3{flex-direction:column;text-align:center}
   .logos-row{gap:24px}
   .finder-box{padding:24px}
   .cmap-skills{grid-template-columns:repeat(2,1fr)}
@@ -326,7 +318,6 @@ footer p{font-size:.76rem;color:var(--m2)}
   .hctas{flex-direction:column}
   .btn-lg{padding:15px 28px}
   .ctain h2{font-size:1.8rem}
-  .footer-nav-row{gap:32px}
   .cmap-split{grid-template-columns:1fr;gap:8px}
   .str-grid{gap:12px}
   .ng{grid-template-columns:1fr 1fr}
@@ -342,30 +333,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
 
 <!-- HEADER -->
-<nav aria-label="メインナビゲーション">
-  <a href="/" aria-label="アカハイエージェント ホーム">
-    <img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:60px;display:block">
-  </a>
+<nav>
+  <div class="logo"><img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:60px;display:block"></div>
   <div class="nav-r">
-    <a href="#service-finder" class="nl">サービスを探す</a>
-    <a href="#strengths" class="nl">アカハイエージェントの特徴</a>
-    <a href="#career-map" class="nl">キャリアの選択肢</a>
-    <a href="#flow" class="nl">ご利用の流れ</a>
-    <a href="#faq" class="nl">よくある質問</a>
-    <button class="btn-n" id="nav-cta" data-link-position="nav" data-link-type="consultation">無料でキャリア相談</button>
+    <a href="https://akahaiagent.com/career/" class="nl">正社員転職</a>
+    <a href="https://akahaiagent.com/freelance/" class="nl">フリーランス</a>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e/" class="btn-n" target="_blank" rel="noopener noreferrer">無料登録はこちら</a>
   </div>
-  <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く" id="hamburger-btn">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="モバイルナビゲーション">
-  <a href="#service-finder" class="nl">サービスを探す</a>
-  <a href="#strengths" class="nl">アカハイエージェントの特徴</a>
-  <a href="#career-map" class="nl">キャリアの選択肢</a>
-  <a href="#flow" class="nl">ご利用の流れ</a>
-  <a href="#faq" class="nl">よくある質問</a>
-  <button class="btn-n" id="mobile-nav-cta" style="margin-top:16px;text-align:center;display:block;padding:14px 22px;width:100%" data-link-position="mobile-nav" data-link-type="consultation">無料でキャリア相談</button>
-</div>
 
 <main id="main-content">
 
@@ -803,40 +778,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-in">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:28px;display:block">
-        <p>デジタルマーケティング領域専門のキャリア支援サービス</p>
-      </div>
-      <nav class="footer-nav-row" aria-label="フッターナビゲーション">
-        <div class="footer-nav-group">
-          <h4>正社員転職</h4>
-          <ul>
-            <li><button id="footer-career" data-link-position="footer" data-link-type="career">20代・未経験から広告運用職へ</button></li>
-          </ul>
-        </div>
-        <div class="footer-nav-group">
-          <h4>フリーランス</h4>
-          <ul>
-            <li><button id="footer-freelance" data-link-position="footer" data-link-type="freelance">フリーランス総合</button></li>
-            <li><button id="footer-ap" data-link-position="footer" data-link-type="accountPlanner">アカウントプランナー</button></li>
-            <li><button id="footer-aio" data-link-position="footer" data-link-type="aio">AIO専門</button></li>
-          </ul>
-        </div>
-        <div class="footer-nav-group">
-          <h4>サービスを探す</h4>
-          <ul>
-            <li><a href="#service-finder">診断ツール</a></li>
-            <li><button id="footer-consult" data-link-position="footer" data-link-type="consultation">無料相談</button></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:24px;display:block">
-      <p>© 2024 アカハイエージェント All Rights Reserved.</p>
-    </div>
+  <div class="fi3">
+    <div class="flogo"><img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:28px;display:block"></div>
+    <p>デジタルマーケティング領域専門のキャリア支援サービス</p>
+    <p>© 2024 アカハイエージェント All Rights Reserved.</p>
   </div>
 </footer>
 
