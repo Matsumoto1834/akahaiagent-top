@@ -32,6 +32,14 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 .gt{background:linear-gradient(135deg,var(--r) 0%,var(--o) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .gp{background:linear-gradient(135deg,var(--r) 0%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.logo{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.08em}.logo span{color:var(--r)}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nl{font-size:.82rem;color:var(--m);text-decoration:none;transition:color .2s}.nl:hover{color:var(--t)}
+.btn-n{font-size:.82rem;font-weight:700;padding:9px 22px;border-radius:6px;text-decoration:none;background:linear-gradient(135deg,var(--r),var(--o));color:#fff;box-shadow:0 0 20px rgba(233,69,96,.3);transition:opacity .2s,box-shadow .2s}.btn-n:hover{opacity:.85;box-shadow:0 0 32px rgba(233,69,96,.5)}
+@media(max-width:900px){.nav-r .nl{display:none}}
+@media(max-width:480px){nav{padding:0 24px}}
 
 /* LAYOUT */
 section{padding:100px 48px;position:relative}
@@ -208,12 +216,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
 
-
-<!-- MOBILE NAV (removed) -->
-<div style="display:none">
-  <a href="#services" class="nl">サービス一覧</a>
-  <a href="#quiz" class="nl">サービス診断</a>
-</div>
+<nav>
+  <div class="logo"><img src="akahaiagent_logo.png" alt="アカハイエージェント" style="height:60px;display:block"></div>
+  <div class="nav-r">
+    <a href="#services" class="nl">サービス一覧</a>
+    <a href="#quiz" class="nl">サービス診断</a>
+    <a href="#flow" class="nl">ご利用の流れ</a>
+    <a href="#faq" class="nl">よくある質問</a>
+    <a href="https://timerex.net/s/akahai_68a1/0826335e" class="btn-n" target="_blank">無料で面談を申し込む</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <main id="main">
