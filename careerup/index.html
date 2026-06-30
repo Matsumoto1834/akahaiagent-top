@@ -106,12 +106,14 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 .cn{font-size:.78rem;color:var(--m2);text-align:center;line-height:1.8}
 
 /* SKILLS */
-#skills{background:var(--surface);padding:80px 48px}
-.sk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:36px}
-.sk-tag{background:#fff;border:1px solid var(--b);border-radius:10px;padding:14px 10px;text-align:center;font-size:.78rem;font-weight:600;color:var(--t);line-height:1.4;transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;min-height:60px}
-.sk-tag:hover{border-color:rgba(233,69,96,.3);box-shadow:0 4px 16px rgba(233,69,96,.08)}
-.sk-note{margin-top:32px;padding:24px 28px;background:#fff;border:1px solid var(--b);border-radius:16px;font-size:.86rem;color:var(--m);line-height:1.9}
-.sk-note p+p{margin-top:8px}
+#skills{background:var(--surface);padding:52px 48px}
+.sk-cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.sk-cat{background:#fff;border:1px solid var(--b);border-radius:14px;padding:20px 22px}
+.sk-cat-title{font-size:.8rem;font-weight:700;color:var(--t);margin-bottom:12px;letter-spacing:.02em}
+.sk-chips{display:flex;flex-wrap:wrap;gap:8px}
+.sk-chip{font-size:.78rem;font-weight:500;color:var(--m);background:var(--surface);border:1px solid var(--b);border-radius:6px;padding:6px 12px;line-height:1.4;white-space:nowrap}
+.sk-note{margin-top:24px;font-size:.84rem;color:var(--m);line-height:1.9;text-align:center}
+.sk-note p+p{margin-top:4px}
 
 /* TARGET */
 #target{background:var(--bg);padding-bottom:40px}
@@ -226,7 +228,7 @@ footer p{font-size:.76rem;color:var(--m2)}
   .hi{grid-template-columns:1fr}.hcard{display:none}
   h1.hh{font-size:2.3rem}
   .cg,.pl,.wg,.tg{grid-template-columns:1fr}
-  .sk-grid{grid-template-columns:repeat(3,1fr)}
+  .sk-cat-grid{grid-template-columns:repeat(2,1fr)}
   .ng{grid-template-columns:1fr 1fr}
   .fs{grid-template-columns:1fr;gap:28px}.fc{display:none}
   .ctain h2{font-size:2rem}.fi3{flex-direction:column;text-align:center}
@@ -238,7 +240,7 @@ footer p{font-size:.76rem;color:var(--m2)}
 }
 @media(max-width:600px){
   h1.hh{font-size:1.9rem}h2{font-size:1.75rem}.hctas{flex-direction:column}.btn-lg{padding:15px 28px}
-  .sk-grid{grid-template-columns:repeat(2,1fr)}
+  .sk-cat-grid{grid-template-columns:1fr}
   .ctain h2{font-size:1.7rem}
   .hbadge{font-size:.72rem}
   .btn-lg{font-size:.9rem}
@@ -451,50 +453,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="tc fi">
       <span class="lbl">Experience</span>
       <h2>経験年数だけではない、<br><span class="gt">評価される広告運用経験。</span></h2>
-      <p class="sub" style="margin-top:14px">経験者採用で企業が確認するのは、広告運用に携わった年数だけではありません。どの媒体を、どの程度の予算で、どのような目的で運用し、どのような改善や成果につなげたかが重要です。</p>
+      <p class="sub" style="margin-top:12px">経験者採用では、運用年数だけでなく、扱った媒体や予算、目的、改善実績まで評価されます。<br>あなたの経験に当てはまる項目を確認してみてください。</p>
     </div>
-    <div class="sk-grid fi d1">
-      <div class="sk-tag">Google広告</div>
-      <div class="sk-tag">Yahoo!広告</div>
-      <div class="sk-tag">Meta広告</div>
-      <div class="sk-tag">LINE広告</div>
-      <div class="sk-tag">TikTok広告</div>
-      <div class="sk-tag">その他広告媒体</div>
-      <div class="sk-tag">検索広告</div>
-      <div class="sk-tag">ディスプレイ広告</div>
-      <div class="sk-tag">動画広告</div>
-      <div class="sk-tag">SNS広告</div>
-      <div class="sk-tag">広告アカウント設計</div>
-      <div class="sk-tag">キーワード設計</div>
-      <div class="sk-tag">ターゲティング設計</div>
-      <div class="sk-tag">広告予算の配分</div>
-      <div class="sk-tag">KPI設計</div>
-      <div class="sk-tag">CPA改善</div>
-      <div class="sk-tag">ROAS改善</div>
-      <div class="sk-tag">CVR改善</div>
-      <div class="sk-tag">LTVを踏まえた運用</div>
-      <div class="sk-tag">データ集計・分析</div>
-      <div class="sk-tag">月次レポート</div>
-      <div class="sk-tag">顧客への改善提案</div>
-      <div class="sk-tag">クリエイティブ改善</div>
-      <div class="sk-tag">LP改善</div>
-      <div class="sk-tag">ABテスト</div>
-      <div class="sk-tag">GA4</div>
-      <div class="sk-tag">Google Tag Manager</div>
-      <div class="sk-tag">Looker Studio</div>
-      <div class="sk-tag">計測環境の整備</div>
-      <div class="sk-tag">代理店ディレクション</div>
-      <div class="sk-tag">プロジェクト進行管理</div>
-      <div class="sk-tag">チームリーダー</div>
-      <div class="sk-tag">メンバー育成</div>
-      <div class="sk-tag">マネジメント</div>
-      <div class="sk-tag">新規案件の立ち上げ</div>
-      <div class="sk-tag">コンペ・提案資料作成</div>
-      <div class="sk-tag">事業会社での<br>マーケティング経験</div>
+    <div class="sk-cat-grid fi d1">
+      <div class="sk-cat">
+        <div class="sk-cat-title">広告媒体の運用</div>
+        <div class="sk-chips">
+          <span class="sk-chip">Google広告</span>
+          <span class="sk-chip">Yahoo!広告</span>
+          <span class="sk-chip">Meta広告</span>
+          <span class="sk-chip">LINE広告</span>
+          <span class="sk-chip">TikTok広告</span>
+          <span class="sk-chip">その他広告媒体</span>
+          <span class="sk-chip">検索広告</span>
+          <span class="sk-chip">ディスプレイ広告</span>
+          <span class="sk-chip">動画広告</span>
+          <span class="sk-chip">SNS広告</span>
+        </div>
+      </div>
+      <div class="sk-cat">
+        <div class="sk-cat-title">戦略・アカウント設計</div>
+        <div class="sk-chips">
+          <span class="sk-chip">広告アカウント設計</span>
+          <span class="sk-chip">キーワード設計</span>
+          <span class="sk-chip">ターゲティング設計</span>
+          <span class="sk-chip">広告予算の配分</span>
+          <span class="sk-chip">KPI設計</span>
+          <span class="sk-chip">LTVを踏まえた運用</span>
+        </div>
+      </div>
+      <div class="sk-cat">
+        <div class="sk-cat-title">改善・分析</div>
+        <div class="sk-chips">
+          <span class="sk-chip">CPA改善</span>
+          <span class="sk-chip">ROAS改善</span>
+          <span class="sk-chip">CVR改善</span>
+          <span class="sk-chip">データ集計・分析</span>
+          <span class="sk-chip">月次レポート</span>
+          <span class="sk-chip">ABテスト</span>
+        </div>
+      </div>
+      <div class="sk-cat">
+        <div class="sk-cat-title">クリエイティブ・提案</div>
+        <div class="sk-chips">
+          <span class="sk-chip">顧客への改善提案</span>
+          <span class="sk-chip">クリエイティブ改善</span>
+          <span class="sk-chip">LP改善</span>
+          <span class="sk-chip">コンペ・提案資料作成</span>
+        </div>
+      </div>
+      <div class="sk-cat">
+        <div class="sk-cat-title">計測・ツール</div>
+        <div class="sk-chips">
+          <span class="sk-chip">GA4</span>
+          <span class="sk-chip">Google Tag Manager</span>
+          <span class="sk-chip">Looker Studio</span>
+          <span class="sk-chip">計測環境の整備</span>
+        </div>
+      </div>
+      <div class="sk-cat">
+        <div class="sk-cat-title">ディレクション・マネジメント</div>
+        <div class="sk-chips">
+          <span class="sk-chip">代理店ディレクション</span>
+          <span class="sk-chip">プロジェクト進行管理</span>
+          <span class="sk-chip">チームリーダー</span>
+          <span class="sk-chip">メンバー育成</span>
+          <span class="sk-chip">マネジメント</span>
+          <span class="sk-chip">新規案件の立ち上げ</span>
+          <span class="sk-chip">事業会社でのマーケティング経験</span>
+        </div>
+      </div>
     </div>
     <div class="sk-note fi d2">
       <p>担当媒体や予算規模だけでなく、課題、施策、行動、成果を整理し、採用企業が評価できる職務経歴書や面接での説明へ落とし込みます。</p>
-      <p>単純に「CPAを改善した」「広告予算を増やした」と記載するのではなく、どのような状況で、何を分析し、どのような施策を実行したのかまで整理します。</p>
     </div>
   </div>
 </section>
