@@ -108,14 +108,16 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 /* SKILLS */
 #skills{background:var(--bg);padding:80px 48px}
 .sk-cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.sk-cat{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:22px 24px}
-.sk-cat-lbl{font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--r);margin-bottom:6px}
-.sk-cat-title{font-size:.88rem;font-weight:700;color:var(--t);margin-bottom:6px;line-height:1.4}
-.sk-cat-desc{font-size:.76rem;color:var(--m2);line-height:1.6;margin-bottom:14px}
-.sk-chips{display:flex;flex-wrap:wrap;gap:6px}
-.sk-chip{font-size:.76rem;font-weight:500;color:var(--m);background:#FAFAFA;border:1px solid #E5E7EB;border-radius:6px;padding:5px 11px;line-height:1.5;white-space:nowrap;cursor:default}
-.sk-note{margin-top:28px;font-size:.84rem;color:var(--m);line-height:1.9;text-align:center}
-.sk-note p+p{margin-top:4px}
+.sk-cat{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:24px 28px}
+.sk-cat-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.sk-cat-num{font-family:'Inter',sans-serif;font-size:2rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--r),var(--o));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;padding-top:2px}
+.sk-cat-meta{flex:1}
+.sk-cat-title{font-size:.95rem;font-weight:700;color:var(--t);line-height:1.35;margin-bottom:4px}
+.sk-cat-desc{font-size:.76rem;color:var(--m2);line-height:1.6}
+.sk-items{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+.sk-item{display:flex;align-items:flex-start;gap:7px;font-size:.8rem;color:var(--m);line-height:1.5}
+.sk-item svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:var(--r);fill:none;stroke-width:2}
+.sk-note{margin-top:28px;font-size:.8rem;color:var(--m2);line-height:1.8;text-align:center}
 
 /* TARGET */
 #target{background:var(--bg);padding-bottom:40px}
@@ -454,93 +456,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="tc fi">
       <span class="lbl">Experience</span>
-      <h2>経験年数だけではない、<br><span class="gt">評価される広告運用経験。</span></h2>
-      <p class="sub" style="margin-top:12px">経験者採用では、運用年数だけでなく、扱った媒体や予算、目的、改善実績まで評価されます。<br>あなたの経験に当てはまる項目を確認してみてください。</p>
+      <h2>経験年数だけではない、<br><span class="gt">評価されるマーケティング実務経験。</span></h2>
+      <p class="sub" style="margin-top:14px">経験者採用で見られるのは、年数だけではありません。<br>広告運用、戦略設計、クライアント提案、プロジェクト推進など、<br>担ってきた役割や生み出した成果が評価されます。</p>
     </div>
     <div class="sk-cat-grid fi d1">
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Media</div>
-        <div class="sk-cat-title">広告媒体の運用</div>
-        <div class="sk-cat-desc">主要媒体の運用経験や、担当してきた配信手法</div>
-        <div class="sk-chips">
-          <span class="sk-chip">Google広告</span>
-          <span class="sk-chip">Yahoo!広告</span>
-          <span class="sk-chip">Meta広告</span>
-          <span class="sk-chip">LINE広告</span>
-          <span class="sk-chip">TikTok広告</span>
-          <span class="sk-chip">その他広告媒体</span>
-          <span class="sk-chip">検索広告</span>
-          <span class="sk-chip">ディスプレイ広告</span>
-          <span class="sk-chip">動画広告</span>
-          <span class="sk-chip">SNS広告</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">01</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">広告媒体の運用</div>
+            <div class="sk-cat-desc">主要媒体の運用経験や、担当してきた配信手法</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Yahoo!広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Meta広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>LINE広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>TikTok広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>その他広告媒体</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>検索広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>ディスプレイ広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>動画広告</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>SNS広告</div>
         </div>
       </div>
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Strategy</div>
-        <div class="sk-cat-title">戦略・アカウント設計</div>
-        <div class="sk-cat-desc">成果を左右する上流設計や運用方針の立案経験</div>
-        <div class="sk-chips">
-          <span class="sk-chip">広告アカウント設計</span>
-          <span class="sk-chip">キーワード設計</span>
-          <span class="sk-chip">ターゲティング設計</span>
-          <span class="sk-chip">広告予算の配分</span>
-          <span class="sk-chip">KPI設計</span>
-          <span class="sk-chip">LTVを踏まえた運用</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">02</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">戦略・アカウント設計</div>
+            <div class="sk-cat-desc">成果を左右する上流設計や運用方針の立案経験</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>広告アカウント設計</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>キーワード設計</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>ターゲティング設計</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>広告予算の配分</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>KPI設計</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>LTVを踏まえた運用</div>
         </div>
       </div>
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Analysis</div>
-        <div class="sk-cat-title">改善・分析</div>
-        <div class="sk-cat-desc">日々の改善施策やレポーティング、分析の実務経験</div>
-        <div class="sk-chips">
-          <span class="sk-chip">CPA改善</span>
-          <span class="sk-chip">ROAS改善</span>
-          <span class="sk-chip">CVR改善</span>
-          <span class="sk-chip">データ集計・分析</span>
-          <span class="sk-chip">月次レポート</span>
-          <span class="sk-chip">ABテスト</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">03</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">改善・分析</div>
+            <div class="sk-cat-desc">データをもとに課題を特定し、改善につなげてきた経験</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>CPA改善</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>ROAS改善</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>CVR改善</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>データ集計・分析</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>月次レポート</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>ABテスト</div>
         </div>
       </div>
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Creative</div>
-        <div class="sk-cat-title">クリエイティブ・提案</div>
-        <div class="sk-cat-desc">改善提案や制作ディレクションなどの実務経験</div>
-        <div class="sk-chips">
-          <span class="sk-chip">顧客への改善提案</span>
-          <span class="sk-chip">クリエイティブ改善</span>
-          <span class="sk-chip">LP改善</span>
-          <span class="sk-chip">コンペ・提案資料作成</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">04</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">クリエイティブ・提案</div>
+            <div class="sk-cat-desc">改善提案や制作ディレクションなどの実務経験</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>顧客への改善提案</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>クリエイティブ改善</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>LP改善</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>コンペ・提案資料作成</div>
         </div>
       </div>
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Measurement</div>
-        <div class="sk-cat-title">計測・ツール</div>
-        <div class="sk-cat-desc">計測設計、分析基盤、可視化ツールの活用経験</div>
-        <div class="sk-chips">
-          <span class="sk-chip">GA4</span>
-          <span class="sk-chip">Google Tag Manager</span>
-          <span class="sk-chip">Looker Studio</span>
-          <span class="sk-chip">計測環境の整備</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">05</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">計測・ツール</div>
+            <div class="sk-cat-desc">計測設計、分析基盤、可視化ツールの活用経験</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>GA4</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google Tag Manager</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Looker Studio</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>計測環境の整備</div>
         </div>
       </div>
       <div class="sk-cat">
-        <div class="sk-cat-lbl">Management</div>
-        <div class="sk-cat-title">ディレクション・マネジメント</div>
-        <div class="sk-cat-desc">案件推進、育成、組織運営などのマネジメント経験</div>
-        <div class="sk-chips">
-          <span class="sk-chip">代理店ディレクション</span>
-          <span class="sk-chip">プロジェクト進行管理</span>
-          <span class="sk-chip">チームリーダー</span>
-          <span class="sk-chip">メンバー育成</span>
-          <span class="sk-chip">マネジメント</span>
-          <span class="sk-chip">新規案件の立ち上げ</span>
-          <span class="sk-chip">事業会社でのマーケティング経験</span>
+        <div class="sk-cat-head">
+          <div class="sk-cat-num">06</div>
+          <div class="sk-cat-meta">
+            <div class="sk-cat-title">ディレクション・マネジメント</div>
+            <div class="sk-cat-desc">案件推進、育成、組織運営などのマネジメント経験</div>
+          </div>
+        </div>
+        <div class="sk-items">
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>代理店ディレクション</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>プロジェクト進行管理</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>チームリーダー</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>メンバー育成</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>マネジメント</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>新規案件の立ち上げ</div>
+          <div class="sk-item"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>事業会社でのマーケティング経験</div>
         </div>
       </div>
     </div>
-    <div class="sk-note fi d2">
-      <p>担当媒体や予算規模だけでなく、課題、施策、行動、成果を整理し、採用企業が評価できる職務経歴書や面接での説明へ落とし込みます。</p>
-    </div>
+    <div class="sk-note fi d2">※ 上記は評価の対象となる経験の一例です。すべての項目に当てはまる必要はありません。</div>
   </div>
 </section>
 
