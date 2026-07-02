@@ -60,14 +60,16 @@ h1.hh{font-size:3.2rem;font-weight:900;line-height:1.18;margin-bottom:24px;lette
 .htrust{display:flex;gap:22px;flex-wrap:wrap}
 .ti{font-size:.78rem;color:var(--m);display:flex;align-items:center;gap:6px}
 .ti svg{width:14px;height:14px;stroke:var(--r);fill:none;stroke-width:2.5;flex-shrink:0}
-.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
-.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,69,96,.6),rgba(255,107,53,.6),transparent)}
-.hfeat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.hfeat-item{background:var(--surface);border:1px solid var(--b);border-radius:12px;padding:20px 16px;display:flex;flex-direction:column;gap:6px}
-.hfeat-icon{width:36px;height:36px;border-radius:10px;background:rgba(233,69,96,.1);border:1px solid rgba(233,69,96,.15);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
-.hfeat-icon svg{width:18px;height:18px;stroke:var(--r);fill:none;stroke-width:2}
-.hfeat-label{font-size:.82rem;font-weight:700;color:var(--t);line-height:1.4}
-.hfeat-sub{font-size:.72rem;color:var(--m);line-height:1.5}
+.hcard{background:#fff;border:1px solid var(--b);border-radius:20px;padding:32px 36px;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--r),var(--o))}
+.hfeat-list{display:flex;flex-direction:column}
+.hfeat-item{display:flex;align-items:flex-start;gap:20px;padding:20px 0;border-bottom:1px solid #F3F4F6}
+.hfeat-item:last-child{border-bottom:none;padding-bottom:0}
+.hfeat-item:first-child{padding-top:0}
+.hfeat-num{font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:900;color:var(--r);line-height:1;flex-shrink:0;width:28px;padding-top:2px}
+.hfeat-body{flex:1}
+.hfeat-label{font-size:.95rem;font-weight:700;color:var(--t);line-height:1.4;margin-bottom:4px}
+.hfeat-sub{font-size:.78rem;color:var(--m);line-height:1.65}
 
 /* NUMBERS */
 #numbers{background:var(--bg);padding:80px 48px}
@@ -290,26 +292,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="hcard fi d2">
-        <div class="hfeat-grid">
+        <div class="hfeat-list">
           <div class="hfeat-item">
-            <div class="hfeat-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div class="hfeat-label">広告代理店が運営</div>
-            <div class="hfeat-sub">実務を知る担当者が支援</div>
+            <div class="hfeat-num">01</div>
+            <div class="hfeat-body">
+              <div class="hfeat-label">広告代理店が運営</div>
+              <div class="hfeat-sub">現場を知る担当者が、業界・職種のリアルに基づいたキャリア支援を行います。</div>
+            </div>
           </div>
           <div class="hfeat-item">
-            <div class="hfeat-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div class="hfeat-label">マーケティング職に特化</div>
-            <div class="hfeat-sub">デジタル領域の経験者向け求人</div>
+            <div class="hfeat-num">02</div>
+            <div class="hfeat-body">
+              <div class="hfeat-label">マーケティング職に特化</div>
+              <div class="hfeat-sub">広告運用・データ分析・CRMなど、マーケティング領域の求人を厳選してご紹介します。</div>
+            </div>
           </div>
           <div class="hfeat-item">
-            <div class="hfeat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-            <div class="hfeat-label">経験・実績の言語化を支援</div>
-            <div class="hfeat-sub">職務経歴書から面接対策まで</div>
+            <div class="hfeat-num">03</div>
+            <div class="hfeat-body">
+              <div class="hfeat-label">経験・実績の言語化を支援</div>
+              <div class="hfeat-sub">あなたの強みが伝わる職務経歴書づくりと、面接対策を丁寧にサポートします。</div>
+            </div>
           </div>
           <div class="hfeat-item">
-            <div class="hfeat-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-            <div class="hfeat-label">求職者の利用料金0円</div>
-            <div class="hfeat-sub">相談から入社まで無料</div>
+            <div class="hfeat-num">04</div>
+            <div class="hfeat-body">
+              <div class="hfeat-label">求職者の利用料金0円</div>
+              <div class="hfeat-sub">ご相談から内定まで、すべてのサービスを無料でご利用いただけます。</div>
+            </div>
           </div>
         </div>
       </div>
